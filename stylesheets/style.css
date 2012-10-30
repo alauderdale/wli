@@ -1,0 +1,71 @@
+/*
+Theme Name: Fast Cat
+Description: Premium Wordpress theme by Alex Lauderdale.
+Version: 1.0
+Author: Alex Lauderdale
+Author URI: http://www.eternalcontrast.com
+*/
+/*reset*/
+/* line 13, ../sass/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/*clearfix*/
+/* line 19, ../sass/style.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 27, ../sass/style.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+/* line 29, ../sass/style.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 30, ../sass/style.scss */
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */
+/* line 33, ../sass/style.scss */
+body {
+  font-family: 'Fanwood Text', serif;
+}
+
+/* global */
+/* line 39, ../sass/style.scss */
+.wrapped {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Type */
+/* Admin Bar */
+/* line 49, ../sass/style.scss */
+.admin-bar {
+  color: #472311;
+  font-family: 'PT Sans', sans-serif;
+}
+/* line 52, ../sass/style.scss */
+.admin-bar .admin-bar-content {
+  float: right;
+}
