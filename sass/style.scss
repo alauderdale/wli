@@ -13,12 +13,15 @@ Author URI: http://www.eternalcontrast.com
 
 /* font faces  */
 
+$headingfont: 'Gill Sans', Arial, Sans-Serif;
+$bodyFont:"minion-pro";
 
 /* brand color variables - #4B6489 */
 $redColor:#472311;
 $redColorLight:#984b24;
 $darkColor:#404040;
 $grayColor:#3a3a3a;
+$ltGrayColor:#bbb;
 $greenColor:#68652f;
 $goldColor:#8e8152;
 
@@ -46,7 +49,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* close commented backslash hack */
 
 body{
-     font-family: 'Fanwood Text', serif;
+     font-family: $bodyFont;
+     background-color:#fafafa;
 }
 
 /* links */
@@ -54,7 +58,7 @@ body{
 a.button{
     color:#fff;
     padding:10px 50px 10px 10px;
-    font-family: Gill Sans, Arial, Sans-Serif;
+    font-family: $headingfont;
     background-color:$greenColor;
     @include border-radius(4px);
     @include transition-duration(.2s);
@@ -72,7 +76,7 @@ a.button{
 }
 
 a.arrow-link{
-    font-family: Gill Sans, Arial, Sans-Serif;
+    font-family: $headingfont;
     font-weight:bold;
     background-image:url(../images/link_arrow.png);
     background-repeat:no-repeat;
@@ -92,18 +96,39 @@ a{
     }
 }
 
+.overlay-link{
+    background-color:tint($goldColor,80%);
+    padding:20px;
+    margin:20px;
+    margin-right:0;
+    @include transition-duration(.3s);
+    &:hover{
+        background-color:tint($goldColor,70%);
+    }
+}
+.overlay-link-right{
+    padding-right:30%;
+}
+
 /* global */
+
+.margin-top{
+    margin-top:20px;
+}
 
 .row{
     width:100%;
     display:block;
     float: left;
-    margin-bottom:40px;
-    padding-bottom:40px;
+    margin-bottom:30px;
+    padding-bottom:30px;
 }
 
 .left{
     float: left;
+}
+.right{
+    float: right;
 }
 
 .wrapped{
@@ -116,7 +141,16 @@ a{
     color:$goldColor;
 }
 
-/* grid */
+.accent-bar{
+    background-color:tint($goldColor, 80%);
+    width:40%;
+    height:160px;
+    float: left;
+    margin-bottom:-200px;
+    opacity:.4;
+}
+
+/* grid add up to 12 */
 
 .four-col{
     width:280px;
@@ -126,11 +160,41 @@ a{
     }
 }
 
+.six-col{
+    width:450px;
+    margin-right:60px;
+    &:nth-child(3n+2){
+        margin-right:0;
+    }
+}
+
+.three-col{
+    width:220px;
+    margin-right:20px;
+}
+
+/*this is 5 items */
+.two-col{
+    width:172px;
+    margin-right:20px;
+}
+
 
 /* Type */
 
+h1, h2, h3, h4, h5, h6{
+    font-family: $headingfont;
+}
+
+h1{
+    text-transform:uppercase;
+    font-size:14pt;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+
 h2{
-    font-family: Gill Sans, Arial, Sans-Serif;
     font-size:17pt;
     font-weight:bold;
     color:$darkColor;
@@ -138,11 +202,55 @@ h2{
     margin-bottom:20px;
 }
 
+h3{
+    font-size:14pt;
+    font-weight:bold;
+    color:$darkColor;
+    letter-spacing:-1px;
+    margin-bottom:10px;
+}
+
+
 p{
     color:$grayColor;
     line-height:150%;
     margin-bottom:20px;
-    float: left;
+}
+
+ul{
+    margin:10px 0 10px 25px;
+    li{
+        margin:10px 0;
+    }
+}
+
+.text-right{
+    text-align:right;
+}
+.text-left{
+    text-align:left;
+}
+
+.big-letter:first-letter{
+    font-size:38pt;
+    font-style:italic;
+}
+
+.large{
+    font-size:18pt;
+}
+
+.heading-borders{
+    border-top:solid 3px tint($goldColor, 50%);
+    border-bottom:solid 1px $goldColor;
+    padding:10px 0;
+}
+
+.text-center{
+    text-align:center;
+}
+.uppercase{
+    text-transform:uppercase;
 }
 
 /* Admin Bar */
@@ -162,7 +270,7 @@ p{
 
 .admin-bar{
     color:#472311;
-    font-family: Gill Sans, Arial, Sans-Serif;
+    font-family: $headingfont;
     font-weight:bold;
     background-image:url(../images/admin_bg.png);
     width:100%;
@@ -209,7 +317,7 @@ p{
     padding:10px 0;
     float: left;
     margin-top:38px;
-    font-family: Gill Sans, Arial, Sans-Serif;
+    font-family: $headingfont;
     @include box-shadow(0 1px 2px rgba(0,0,0,.1), inset 0 1px 2px rgba(0,0,0,.1));
     .logo a{
             width:251px;
@@ -227,6 +335,7 @@ p{
         list-style:none;
         position:relative;
         top:32px;
+        margin-left:0;
         li{
             float: left;
             margin-right:30px;
@@ -252,7 +361,7 @@ p{
 
 .hero{
     width:100%;
-    height:340px;
+    height:290px;
     background-color:#999;
     float: left;
     padding-top:130px;
@@ -262,12 +371,15 @@ p{
     background-size: cover;
     margin-bottom:40px;
     background-position:top;
+    @include box-shadow(0 1px 0 #fff);
     h1{
-        font-family: Gill Sans, Arial, Sans-Serif;
+        font-family: $headingfont;
+        text-transform:none;
         font-size:58pt;
         font-weight:bolder;
         color:#fff;
         text-shadow:0 1px 0 rgba(0,0,0,.7);
+        margin-bottom:0;
     }
     .and{
         width:54px;
@@ -283,9 +395,10 @@ p{
         font-size:28pt;
         color:#fff;
         font-style:italic;
+        font-weight:normal;
         letter-spacing:2px;
         text-shadow:0 1px 0 rgba(0,0,0,.7);
-        font-family: 'Fanwood Text', serif;
+        font-family: $bodyFont;
     }
     .hero-learn-more{
         position:relative;
@@ -302,11 +415,214 @@ p{
 }
 
 .home-descript-copy{
-    font-size:15pt;
-    columns:120px 2;
-    -webkit-columns:120px 2; /* Safari and Chrome */
-    -moz-columns:120px 2; /* Firefox */
+    @include columns(120px 2);
+    width:100%;
+    float: left;
 
+}
+
+/* footer */
+
+
+footer{
+    width:100%;
+    float: left;
+    background-image:url(../images/footer_bg.png);
+    padding:60px 0 0 0;
+    @include box-shadow(inset 0 2px 4px rgba(0,0,0,.2));
+    p{
+        font-size:10pt;
+    }
+    h1{
+        text-transform:uppercase;
+        font-size:12pt;
+        font-family:$headingfont;
+        font-weight:bold;
+        border-top:4px solid $ltGrayColor;
+        border-bottom:1px solid $ltGrayColor;
+        padding:10px 0;
+        margin-bottom:20px;
+    }
+    a {
+        display:block;
+        &.footer-button{
+        font-family:$headingfont;
+        color:#fff;
+        padding:10px;
+        background-color:$darkColor;
+        font-size:12pt;
+        text-shadow:0 1px 0 #000;
+        @include border-radius(4px);
+        @include box-shadow(0 1px 0 #fff, inset 0 1px 2px rgba(0,0,0,.5));
+            &:hover{
+                background-color:#777;
+            }
+        }
+        &:hover{
+            @include transition-duration(.2s);
+            h2{
+                color:$redColorLight;
+                @include transition-duration(.2s);
+            }
+        }
+
+    }
+    h2{
+        margin-bottom:5pt;
+        font-size:12pt;
+        font-weight:normal;
+    }
+    .footer-menu{
+        background-color:#2a2a2a;
+        width:100%;
+        padding:40px 0 50px 0;
+        margin-top:40px;
+        font-family:$headingfont;
+        font-size:10pt;
+        p{
+            color:#fff;
+            margin-right:90px;
+        }
+        ul{
+            list-style:none;
+            margin:0;
+            li{
+                float: left;
+                margin:0;
+                margin-right:20px;
+                text-transform:uppercase;
+                a{
+                    color:#fff;
+                    &:hover{
+                        color:tint(#000,60%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* about */
+
+.about-image{
+    z-index:999;
+    margin-top:70px;
+}
+
+.about-process{
+    margin-top:20px;
+}
+
+    /* Meet Us */
+
+.meet-us{
+    margin-top:20px;
+    p{
+        margin-bottom:5px;
+    }
+}
+
+/* services */
+
+.service{
+    width:100%;
+    float: left;
+    padding:20px 0;
+    &:nth-child(odd){
+        background-image:url(../images/service_shadow.png);
+        background-repeat:no-repeat;
+        background-position:80px -10px;
+        background-color:#f2f2f2;
+        .service-top-info{
+            .six-col{
+                margin:0;
+                &:first-of-type{
+                    margin-left:60px;
+                }
+            }
+            .left{
+                float: right;
+            }
+        }
+    }
+}
+
+/* Blog */
+
+.blog{
+    position:relative;
+    bottom:200px;
+    .blog-sidebar{
+        font-family:$headingfont;
+        float: right;
+        background-color:rgba(255,255,255,.8);
+        padding:20px;
+        .sidebar-section{
+            margin-bottom:20px;
+            h1{
+                font-size:12pt;
+            }
+            ul{
+                list-style:none;
+                margin-left:0;
+                li{
+                    margin:5px 0;
+                }
+            }
+        }
+    }
+    .blog-main{
+        @include box-shadow(0 2px 10px rgba(0,0,0,.2));
+        padding:30px;
+        background-color:#fff;
+        width:725px;
+        float: left;
+        .heading{
+            margin-bottom:10px;
+            text-transform:none;
+            font-size:20pt;
+        }
+        .date{
+            font-size:10pt;
+            margin-bottom:20px;
+        }
+        img{
+        margin-bottom:20px;
+        }
+        .post{
+            border-bottom:solid 3px tint($goldColor, 50%);
+            margin:20px;
+            padding:20px;
+        }
+        ul{
+            &.post-meta{
+                margin:0;
+                list-style:none;
+                li {
+                    float: left;
+                    font-family:$headingfont;
+                    font-weight:bold;
+                    margin-right:10px;
+                    text-shadow:0 1px 0 #fff;
+                    a{
+                        &.arrow-link{
+                            background-position:10px 16px;
+                            padding-left:30px;
+                        }
+                        display:block;
+                        padding:10px;
+                        background-color:#f2f2f2;
+                        @include border-radius(4px);
+                        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
+                        &:hover{
+                            text-decoration:none;
+                            background-color:shade(#f2f2f2,5%);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
