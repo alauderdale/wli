@@ -6,7 +6,7 @@ Template Name: About
 
 <?php get_header(); ?>
 
-<div class="hero" style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>); height:195px;">
+<div class="hero" style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>);">
         <div class="wrapped hero-content">
             <h1><?php echo get_post_meta($post->ID, 'hero_title', true); ?></h1>
             <h2><?php echo get_post_meta($post->ID, 'hero_sub', true); ?></h2>
