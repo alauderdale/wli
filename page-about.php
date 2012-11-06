@@ -1,0 +1,90 @@
+<?php
+/*
+Template Name: About
+ */
+?>
+
+<?php get_header(); ?>
+
+<div class="hero" style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>); height:195px;">
+        <div class="wrapped hero-content">
+            <h1><?php echo get_post_meta($post->ID, 'hero_title', true); ?></h1>
+            <h2><?php echo get_post_meta($post->ID, 'hero_sub', true); ?></h2>
+        </div><!-- end hero content -->
+    </div><!-- end hero -->
+    <div class="clearfix"></div>
+    <div class="accent-bar"></div>
+    <div class="wrapped">
+        <div class="about-description row">
+            <div class="six-col left"> 
+                <div class="about-image">
+                    <?php 
+                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                          the_post_thumbnail();
+                        } 
+                    ?>
+                </div>
+            </div>
+            <div class="six-col left"> 
+                <!--start the loop-->
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <?php the_content(); ?> 
+                <!--end the loop-->
+                <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div>
+            <h1 class="heading-borders">
+                Our Process
+            </h1>
+            <div class="about-process text-center ">
+                <div class="process-hero">
+                    <img src="<?php bloginfo('template_url'); ?>/images/process_img.png"/>
+                </div>
+                <?php
+                $processloop = new WP_Query( array( 'post_type' => 'process_step') );
+                ?>
+                <?php while ( $processloop->have_posts() ) : $processloop->the_post(); ?>
+                    <div class="two-col process-step left">
+                        <h3 class="uppercase"><?php the_title(); ?></h3>
+                        <?php the_content(); ?>
+                    </div>
+                <!-- end process loop -->
+                <?php endwhile; ?>
+            </div> 
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="overlay-link right overlay-link-right">
+        <a class="text-right  arrow-link" href="#">We're here to help, drop us a line</a> 
+    </div>
+    <div class="clearfix"></div>
+    <div class="wrapped">  
+        <h1 class="heading-borders">
+                Meet Us
+        </h1>
+        <div class="meet-us row">
+            <?php
+                $peopleloop = new WP_Query( array( 'post_type' => 'people') );
+            ?>
+            <?php while ( $peopleloop->have_posts() ) : $peopleloop->the_post(); ?>
+            <div class="three-col left">
+                <?php 
+                    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                      the_post_thumbnail();
+                    } 
+                ?>
+                <h3><?php the_title(); ?></h3>
+                <p class="gold"><?php echo get_post_meta($post->ID, 'job_title', true); ?></p>
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>" class="arrow-link">
+                    See More
+                </a>
+            </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+<?php get_footer(); ?>

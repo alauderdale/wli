@@ -14,9 +14,7 @@
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="post">
                         <h1 class="heading">
-                            <a href="<?php the_permalink(); ?> ">
                                 <?php the_title(); ?> 
-                            </a>
                         </h1>
                         <h3 class="date">
                             <?php the_date(); ?> 
@@ -29,7 +27,7 @@
                             ?>
                         </div>
                         <div class="content">
-                            <?php the_excerpt(); ?> 
+                            <?php the_content(); ?> 
                         </div>
                         <ul class="post-meta">
                             <li>

@@ -13,7 +13,7 @@ Author URI: http://www.eternalcontrast.com
 
 /* font faces  */
 
-$headingfont: "open-sans", Arial, Sans-Serif;
+$headingfont: "myriad-pro", Arial, Sans-Serif;
 $bodyFont:"minion-pro";
 
 /* brand color variables - #4B6489 */
@@ -87,7 +87,7 @@ a.arrow-link{
     font-weight:bold;
     background-image:url(../images/link_arrow.png);
     background-repeat:no-repeat;
-    background-position:0 4px;
+    background-position:0 7px;
     padding-left:15px;
     @include transition-duration(.3s);
     &:hover{
@@ -147,6 +147,9 @@ a{
 
 .gold{
     color:$goldColor;
+    p{
+        color:$goldColor;
+    }
 }
 
 .accent-bar{
@@ -243,6 +246,10 @@ ul{
     }
 }
 
+em{
+    font-style:italic;
+}
+
 .text-right{
     text-align:right;
 }
@@ -257,6 +264,9 @@ ul{
 
 .large{
     font-size:14pt;
+    p{
+        font-size:14pt;
+    }
 }
 
 .heading-borders{
@@ -271,6 +281,7 @@ ul{
 .uppercase{
     text-transform:uppercase;
 }
+
 
 /* Admin Bar */
 
@@ -326,7 +337,8 @@ ul{
 
 /* Main Nav */
 
-.active{
+.active, .current_page_item{
+    padding-bottom:10px;
     border-bottom:solid $redColor 1px;
 }
 
@@ -671,6 +683,7 @@ footer{
         font-size:58pt;
         margin-bottom:0;
         text-shadow:0 2px 2px rgba(0, 0, 0, 0.4);
+        line-height:95%;
     }
     p{
         color:#fff;

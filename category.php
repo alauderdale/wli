@@ -9,6 +9,12 @@
     <div class="wrapped">
         <div class="blog">
             <div class="blog-main">
+                <h1 style="margin-left:40px;">
+                    Posts in:
+                    <em class="gold">
+                    <?php single_cat_title(); ?> 
+                    </em>
+                </h1>
                 <!--start the loop-->
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
