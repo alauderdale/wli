@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+    <link href="stylesheets/royalslider.css" rel="stylesheet">
+    <link href="stylesheets/rs-default.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css" media="screen" />
+
 <!-- fonts -->
     <script type="text/javascript" src="//use.typekit.net/suy3bpz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -9,6 +13,11 @@
 <!-- jquery -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- slider -->
+    <script src="javascripts/jquery.royalslider.min.js"></script>
+<!-- custom scripts -->
+    <script type="text/javascript" src="javascripts/scripts.js"></script>
 
     <title>Wealth Legacy Institute</title>
 </head>
@@ -67,15 +76,46 @@
     </div><!-- end main nav -->
     </header>
     <div class="top-padding"></div>
-    <div class="hero" style="background-image:url(images/home_bg.png); height:330px;">
-        <div class="wrapped hero-content">
-            <h1>Clarity Confidence <br/> <span class="and"></span> Peace of Mind</h1>
-            <h2>We are an independent wealth advisory consulting firm.</h2>
-            <a href="#" class="button hero-learn-more">
-                Learn More About What We Do
-            </a>
-        </div><!-- end hero content -->
-    </div><!-- end hero -->
+<!--     slider -->
+    <div class="slider ">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+            <div class="rsContent">
+                <img class="rsImg" src="images/home_bg.png" alt="">
+                <div class="wrapped slider-caption  infoBlockLeftBlack rsABlock rsNoDrag" data-fade-effect="" data-move-offset="10" data-move-effect="left" data-speed="200">
+                    <h1>Clarity Confidence  <br/>
+                    <span class="and"></span> Peace of Mind</h1>
+                    <p>We are an independent wealth advisory consulting firm.</p>
+                    <a class="button" href="#">
+                        <span class="button-copy left">
+                            Learn More About What We Do
+                        </span>
+                        <span class="more-arrow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="rsContent">
+                <img class="rsImg" src="images/services_bg.png" alt="">
+                <div class="wrapped slider-caption  infoBlockLeftBlack rsABlock rsNoDrag" data-fade-effect="" data-move-offset="10" data-move-effect="left" data-speed="200">
+                    <h1>Im Featured   <br/>
+                     Content!</h1>
+                    <p>You will be able to edit me all you want</p>
+                    <a class="button" href="#">
+                        And set the call to action<span class="more-arrow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="rsContent">
+                <img class="rsImg" src="images/about_bg.png" alt="">
+                <div class="wrapped slider-caption  infoBlockLeftBlack rsABlock rsNoDrag" data-fade-effect="" data-move-offset="10" data-move-effect="left" data-speed="200">
+                    <h1>Use the left and right arows</h1>
+                    <p>to navigate between slides</p>
+                    <a class="button" href="#">
+                        Click here to learn more<span class="more-arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="clearfix"></div>
     <div class="wrapped">
         <div class="row border-bottom">
@@ -108,7 +148,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="row border-bottom">
+        <div class="row">
             <h2>
                 Let Us Guide The Way
             </h2>
