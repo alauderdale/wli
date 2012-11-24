@@ -8,6 +8,7 @@
     <link href="<?php bloginfo('template_url'); ?>/stylesheets/royalslider.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/stylesheets/rs-default.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="<?php bloginfo('template_url'); ?>/stylesheets/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<?php bloginfo('template_url'); ?>/stylesheets/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
 
 <!-- fonts -->
     <script type="text/javascript" src="//use.typekit.net/suy3bpz.js"></script>
@@ -19,6 +20,9 @@
 
 <!-- slider -->
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.royalslider.min.js"></script>
+<!-- fancybox -->
+    <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.fancybox.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.fancybox.pack.js"></script>
 <!-- custom scripts -->
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/scripts.js"></script>
     <?php wp_head(); ?>

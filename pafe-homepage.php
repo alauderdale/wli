@@ -38,33 +38,19 @@ Template Name: Home
     <div class="clearfix"></div>
     <div class="wrapped">
         <div class="row border-bottom">
+            <?php
+                $homeserviceloop = new WP_Query( array( 'post_type' => 'home_service') );
+            ?>
+            <?php while ( $homeserviceloop->have_posts() ) : $homeserviceloop->the_post(); ?>
             <div class="four-col left  teaser">
-                <h2>Financial Planning 
-                    &amp; Advice
+                <h2>
+                    <?php the_title(); ?>
                 </h2>
-                <p>
-                    In lacinia elit nec nibh ullamcorper ullamcorper id ut nisi. In imperdiet, augue non consectetur porta
-                </p>
-                <a class="arrow-link" href="#">Learn More</a>   
-            </div>
-            <div class="four-col left teaser">
-                <h2>Financial Planning 
-                    &amp; Advice
-                </h2>
-                <p>
-                    In lacinia elit nec nibh ullamcorper ullamcorper id ut nisi. In imperdiet, augue non consectetur porta
-                </p>   
-                <a class="arrow-link" href="#">Learn More</a>   
-            </div>
-            <div class="four-col left teaser">
-                <h2>Financial Planning 
-                    &amp; Advice
-                </h2>
-                <p>
-                    In lacinia elit nec nibh ullamcorper ullamcorper id ut nisi. In imperdiet, augue non consectetur porta
-                </p>  
-                <a class="arrow-link" href="#">Learn More</a>    
-            </div>
+                <?php the_content(); ?>
+                <a class="arrow-link" href="<?php echo get_post_meta($post->ID, 'service_call_to_action_url', true); ?>"><?php echo get_post_meta($post->ID, 'service_call_to_action_text', true); ?></a>   
+            </div>        
+            <!-- end home service loop -->
+            <?php endwhile; ?>
         </div>
         <div class="clearfix"></div>
         <div class="row">

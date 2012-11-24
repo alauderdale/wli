@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
 
+// royal slidet
+
   $('#full-width-slider').royalSlider({
     arrowsNav: true,
     loop: true,
@@ -16,5 +18,9 @@ jQuery(document).ready(function($) {
     transitionType:'move',
     globalCaption: true
   });
+
+/// fancybox
+
+  $('.fancybox').fancybox();
 
 });

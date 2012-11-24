@@ -72,15 +72,17 @@ Template Name: About
             ?>
             <?php while ( $peopleloop->have_posts() ) : $peopleloop->the_post(); ?>
             <div class="three-col left">
-                <?php 
-                    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                      the_post_thumbnail();
-                    } 
-                ?>
+                <a href="<?php the_permalink(); ?>" class="fancybox fancybox.ajax">
+                    <?php 
+                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                          the_post_thumbnail();
+                        } 
+                    ?>
+                </a>
                 <h3><?php the_title(); ?></h3>
                 <p class="gold"><?php echo get_post_meta($post->ID, 'job_title', true); ?></p>
                 <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="arrow-link">
+                <a href="<?php the_permalink(); ?>" class="arrow-link fancybox fancybox.ajax">
                     See More
                 </a>
             </div>

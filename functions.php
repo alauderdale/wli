@@ -74,6 +74,18 @@
     
             )
         );
+
+        register_post_type( 'home_service',
+            array(
+                'labels' => array(
+                    'name' => __( 'Home Services' ),
+                    'singular_name' => __( 'Homepage Service' )
+                ),
+                'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+                'public' => true,
+    
+            )
+        );
     }
 
     ///create portfolio categories
@@ -239,6 +251,31 @@
                     'type' => 'textarea',
                     'std' => ''
                 ),
+            )
+        ),
+
+        ///home service
+        array(
+            'id' => 'my-meta-box-5',
+            'title' => 'Home Service Options',
+            'pages' => array('home_service'), // multiple post types
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'call to action text',
+                    'desc' => 'add text for the service call to action button',
+                    'id' => 'service_call_to_action_text',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'call to action URL',
+                    'desc' => 'add URL for the service call to action button',
+                    'id' => 'service_call_to_action_url',
+                    'type' => 'text',
+                    'std' => ''
+                )
             )
         ),
     );

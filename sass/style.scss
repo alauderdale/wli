@@ -1,5 +1,5 @@
 /*
-Theme Name: Fast Cat
+Theme Name: WLI
 Description: Premium Wordpress theme by Alex Lauderdale.
 Version: 1.0
 Author: Alex Lauderdale
@@ -637,6 +637,12 @@ footer{
             border-bottom:solid 3px tint($goldColor, 50%);
             margin:20px;
             padding:20px;
+            .featured-img{
+                img{
+                    max-width:650px;
+                    height:auto;
+                }
+            }
         }
         ul{
             &.post-meta{
@@ -647,6 +653,7 @@ footer{
                     font-family:$headingfont;
                     font-weight:bold;
                     margin-right:10px;
+                    margin-left:0;
                     text-shadow:0 1px 0 #fff;
                     a{
                         &.arrow-link{
@@ -766,39 +773,70 @@ footer{
   margin: 0 auto 24px;
 }
 
-// @media screen and (min-width:960px) and (min-height:660px) {
-//   .heroSlider .rsOverflow,
-//   .royalSlider.heroSlider {
-//       height: 220px !important;
-//   }
-// }
+/* contact */
 
-// @media screen and (min-width:960px) and (min-height:1000px) {
-//     .heroSlider .rsOverflow,
-//     .royalSlider.heroSlider {
-//         height: 660px !important;
-//     }
-// }
-// @media screen and (min-width: 0px) and (max-width: 800px) {
-//   .royalSlider.heroSlider,
-//   .royalSlider.heroSlider .rsOverflow {
-//     height: 300px !important;
-//   }
-//   .infoBlock {
-//     padding: 10px;
-//     height: 100%;
-//     max-height: 100%;
-//     min-width: 40%;
-//     left: 0;
-//     top: 0;
-//     right: auto;
-//     font-size: 12px;
-//   }
-//   .infoBlock h3 {
-//      font-size: 14px;
-//      line-height: 17px;
-//   }
-// }
+.contact-form{
+    p{
+        float: left;
+        &.lebel{
+            font-family:$headingfont;
+            font-weight:bold;
+            width:120px;
+            margin-right:20px;
+            text-align:right;
+            margin-top:15px;
+        }
+    }
+    .contact-left{
+        .wpcf7-select{
+            height: 47px;
+            width: 323px;
+            font-size: 10pt;
+            box-shadow:none;
+            padding: 2px;
+            padding-left:10px;
+            border:1px solid #bbb;
+            background:none!important;
+            background-color:white;
+            @include appearance(none);
+            @include border-radius(0);
+        }
+        margin-right:20px;
+        input[type="text"]{
+            height: 47px;
+            width: 317px;
+            font-size: 15pt;
+            box-shadow:none;
+            padding: 2px;
+            border:1px solid #bbb;
+        }
+        input[type="submit"]{
+            border:none;
+            background:none;
+            font-family:$headingfont;
+            font-size:15pt;
+            color:$redColor;
+            background-image:url(../images/link_arrow.png);
+            background-position:0 10px;
+            background-repeat:no-repeat;
+            padding-left:20px;
+            margin-left:142px;
+        }
+    }
+    .contact-right{
+        textarea{
+            height: 304px;
+            width: 470px;
+            font-size: 15pt;
+            box-shadow:none;
+            padding: 2px;
+            border:1px solid #bbb;
+        }
+    }
+    .wpcf7-validation-errors {
+        border:none!important;
+    }
+}
 
 
 

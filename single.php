@@ -31,11 +31,6 @@
                         </div>
                         <ul class="post-meta">
                             <li>
-                                <a href="<?php the_permalink(); ?>" class="arrow-link continue-reading">
-                                    Continue Reading
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#" class="share">
                                     Share
                                 </a>
