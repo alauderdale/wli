@@ -82,7 +82,7 @@ a.button{
     top:-3px;
 }
 
-a.arrow-link{
+.arrow-link{
     font-family: $headingfont;
     font-weight:bold;
     background-image:url(../images/link_arrow.png);
@@ -545,6 +545,10 @@ footer{
     margin-top:20px;
 }
 
+.process-hero{
+    margin-bottom:20px;
+}
+
     /* Meet Us */
 
 .meet-us{
@@ -559,6 +563,26 @@ footer{
         margin-bottom:5px;
     }
 }
+
+.person-overlay{
+    width: 700px;
+    height:auto;
+    display:inline-block;
+    padding:20px;
+    .person-img{
+    width: 33%;
+    margin-right:20px;
+    img{
+        @include border-radius(5px);
+        @include box-shadow(0 1px 1px rgba(0,0,0,.5))
+    }
+    }
+    .person-descript{
+    width: 63%;
+    }
+}
+
+
 
 /* services */
 
@@ -588,6 +612,18 @@ footer{
                 float: right;
             }
         }
+    }
+}
+
+.service-thumb{
+    &:first-of-type{
+            img{
+                left:70px;
+            }
+    }
+
+    img{
+        position:relative;
     }
 }
 
@@ -683,7 +719,7 @@ footer{
 }
 .slider-caption{
     position:relative!important;
-    top:-366px!important;
+    top:-425px!important;
     background:none!important;
     h1{
         text-transform:none;

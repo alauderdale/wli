@@ -21,6 +21,10 @@ jQuery(document).ready(function($) {
 
 /// fancybox
 
-  $('.fancybox').fancybox();
+  $('.fancybox').fancybox({
+    padding: 10,
+    overlayColor: '#fff'
+
+  });
 
 });

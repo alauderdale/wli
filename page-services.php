@@ -25,7 +25,7 @@ Template Name: Services
         <section class="service">
             <div class="wrapped">
                 <div class="row service-top-info margin-top">
-                    <div class="six-col left"> 
+                    <div class="six-col left service-thumb"> 
                         <?php 
                             if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                               the_post_thumbnail();
@@ -65,9 +65,9 @@ Template Name: Services
                     </div>
                 </div>
             </div>
-            <div class="overlay-link right overlay-link-right">
-                <a class="text-right  arrow-link" href="#">We're here to help, drop us a line</a> 
-            </div>
+            <a href="#" class="text-right   overlay-link right overlay-link-right">
+                <span class="arrow-link">We're here to help, drop us a line</span>
+            </a>
         </section>
     <?php endwhile; ?>
 
