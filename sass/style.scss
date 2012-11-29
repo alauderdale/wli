@@ -685,6 +685,24 @@ footer{
     }
 }
 
+#sticky-menu{
+    ul{
+        padding:10px 0px;
+        list-style:none;
+        text-align:center;
+        float: left;
+        width: 100%;
+        border-top:1px solid $goldColor;
+        border-bottom:1px solid $goldColor;
+        li{
+            float: left;
+            display:inline;
+            text-align:center;
+            margin:0 5px;
+        }
+    }
+}
+
 /* Blog */
 
 .blog{

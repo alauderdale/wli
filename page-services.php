@@ -13,10 +13,12 @@ Template Name: Services
         </div><!-- end hero content -->
     </div><!-- end hero -->
     <div class="clearfix"></div>
-    <div class="wrapped">
-        <h1 class="heading-borders">
-            Our Services
-        </h1>
+    <div id="sticky-menu" class="wrapped">
+        <ul>
+            <li><a href="#">Financial Planning</a></li>
+            <li><a href="#">Family Enterprise</a></li>
+            <li><a href="#">Investment Management</a></li>
+        </ul>
     </div>
     <?php
         $servicesloop = new WP_Query( array( 'post_type' => 'service') );
