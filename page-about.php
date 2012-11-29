@@ -92,10 +92,13 @@ Template Name: About
         <?php
                 $partnerloop = new WP_Query( array( 'post_type' => 'partner') );
         ?>
-        <h1 class="heading-borders">
-                Trusted By
-        </h1>
-        <div class="partners">
+        <?php if ( post_type_exists('partner') ) { 
+            echo '<h1 class="heading-borders">
+                    Trusted By
+                  </h1>';
+            }
+        ?>
+        <div class="partners margin-top left">
             <?php while ( $partnerloop->have_posts() ) : $partnerloop->the_post(); ?>
                 <div class="partner left">
                     <a class="left" href="<?php echo get_post_meta($post->ID, 'partner_url', true); ?>" target="_blank">

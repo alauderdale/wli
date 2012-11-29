@@ -408,6 +408,7 @@ em{
     background-color:#999;
     float: left;
     padding-top:130px;
+    text-align:center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -596,6 +597,8 @@ footer{
             margin:20px;
             margin-top:0;
             display:inline-block;
+            width: 223px;
+            height: 223px;
             @include border-radius(4px);
             @include box-shadow( 0 1px 0 #fff);
             transition: all 0.3s ease-in-out;
