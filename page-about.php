@@ -88,5 +88,25 @@ Template Name: About
             </div>
             <?php endwhile; ?>
         </div>
+        <div class="clearfix"></div>
+        <?php
+                $partnerloop = new WP_Query( array( 'post_type' => 'partner') );
+        ?>
+        <h1 class="heading-borders">
+                Trusted By
+        </h1>
+        <div class="partners">
+            <?php while ( $partnerloop->have_posts() ) : $partnerloop->the_post(); ?>
+                <div class="partner left">
+                    <a class="left" href="<?php echo get_post_meta($post->ID, 'partner_url', true); ?>" target="_blank">
+                        <?php 
+                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                          the_post_thumbnail();
+                        } 
+                    ?>
+                    </a>
+                </div>
+            <?php endwhile; ?>
+        </div>
     </div>
 <?php get_footer(); ?>

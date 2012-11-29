@@ -86,6 +86,18 @@
     
             )
         );
+
+        register_post_type( 'partner',
+            array(
+                'labels' => array(
+                    'name' => __( 'Trusted By' ),
+                    'singular_name' => __( 'partner' )
+                ),
+                'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+                'public' => true,
+    
+            )
+        );
     }
 
     ///create portfolio categories
@@ -276,6 +288,23 @@
                     'type' => 'text',
                     'std' => ''
                 )
+            )
+        ),
+        ///partners
+        array(
+            'id' => 'my-meta-box-6',
+            'title' => 'Partner Options',
+            'pages' => array('partner'), // multiple post types
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Partner URL',
+                    'desc' => 'add URL for the partner',
+                    'id' => 'partner_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
             )
         ),
     );
