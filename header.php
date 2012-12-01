@@ -39,7 +39,7 @@
                 Call us 1.877.444.4444
             </p>
             <p>
-                <a class="login-button fancybox.iframe fancybox" href="http://www.w3schools.com">   
+                <a class="login-button fancybox.iframe fancybox" href="https://www.junxureclientview.com/Pages/Login.aspx">   
                     client login
                 </a>
             </p>
@@ -47,10 +47,11 @@
     </div><!-- end adminbar -->
     <div class="main-nav">
         <div class="logo left"><a href="<?php echo get_option('home'); ?>"></a></div>
-        <div class="wrapped">
+        <a class="get-started-link uppercase right" href="#">Start a Project</a>
+        <div class="clearfix"></div>
+        <div class="menu-contain">
             <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) );   ?>            
         </div><!-- end wrapped -->
-        <a class="get-started-link uppercase right" href="#">Start a Project</a>
     </div><!-- end main nav -->
     </header>
     <div class="top-padding"></div>

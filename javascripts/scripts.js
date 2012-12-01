@@ -1,6 +1,20 @@
 jQuery(document).ready(function($) {
 
-// royal slidet
+/// get started
+
+$('.get-started-link').mouseover(function(){
+
+  $(this).css('background-position','140px 5px');
+
+});
+
+$('.get-started-link').mouseout(function(){
+
+  $(this).css('background-position','135px 5px');
+
+});
+
+// royal slider
 
   $('#full-width-slider').royalSlider({
     arrowsNav: true,
