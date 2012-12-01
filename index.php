@@ -7,7 +7,7 @@
     </div><!-- end hero -->
     <div class="clearfix"></div>
     <div class="wrapped">
-        <div class="blog">
+        <div class="blog left">
             <div class="blog-main">
                 <!--start the loop-->
                 <?php if (have_posts()) : ?>

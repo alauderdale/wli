@@ -15,7 +15,8 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <!-- jquery -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <!--   <script src="http://code.jquery.com/jquery-latest.js"></script>-->
+    <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery-1.8.2.min.js"></script>
 <!--     <meta name="viewport" content="width=device-width,initial-scale=1"> -->
 
 <!-- slider -->
@@ -33,24 +34,23 @@
 <body>
     <header>
     <div class="admin-bar">
-        <div class="wrapped">
-            <div class="admin-bar-content">
-                <p>
-                    Call us 1.877.444.4444
-                </p>
-                <p>
-                    <a class="login-button fancybox.iframe fancybox" href="http://www.w3schools.com">   
-                        client login
-                    </a>
-                </p>
-            </div>
+        <div class="admin-bar-content right">
+            <p>
+                Call us 1.877.444.4444
+            </p>
+            <p>
+                <a class="login-button fancybox.iframe fancybox" href="http://www.w3schools.com">   
+                    client login
+                </a>
+            </p>
         </div>
     </div><!-- end adminbar -->
     <div class="main-nav">
+        <div class="logo left"><a href="<?php echo get_option('home'); ?>"></a></div>
         <div class="wrapped">
-            <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) );   ?>
-            <div class="logo"><a href="<?php echo get_option('home'); ?>"></a></div>
+            <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) );   ?>            
         </div><!-- end wrapped -->
+        <a class="get-started-link uppercase right" href="#">Start a Project</a>
     </div><!-- end main nav -->
     </header>
     <div class="top-padding"></div>

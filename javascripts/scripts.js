@@ -30,5 +30,6 @@ jQuery(document).ready(function($) {
 /// sticky
 
   $('#sticky-menu').stickyScroll({ container: '.services-contiainer' });
+  $('.blog-sidebar').stickyScroll({ container: '.blog' });
 
 });

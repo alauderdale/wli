@@ -321,6 +321,7 @@ em{
     z-index: 100;
     .admin-bar-content{
         float: right;
+        margin-right:20px;
         p{
             float: left;
             font-size:8pt;
@@ -355,7 +356,7 @@ em{
 }
 
 .main-nav{
-    width:100%;
+    width: 100%;
     background-color:rgba(255,255,255,.9);
     padding:10px 0;
     float: left;
@@ -366,25 +367,38 @@ em{
             width:251px;
             height:73px;
             display:block;
+            margin:0 20px;
             background-image:url(../images/logo.png);  
-            float: right; 
             opacity:1;
             @include transition-duration(.1s);
             &:hover{
                 opacity:.8;
             }        
     }
+    .get-started-link{
+        position:relative;
+        top:33px;
+        margin-right:20px;
+    }
+    .menu-main-container{
+        width: 440px;
+        margin: 0 auto;
+    }
     ul{
         list-style:none;
         position:relative;
-        top:24px;
+        top:15px;
         margin-left:0;
+        float: left;
         li{
             float: left;
             margin-right:30px;
             text-transform:uppercase;
             font-size:10pt;
             text-shadow:0 1px 0 #fff;
+            &:last-of-type{
+                margin-right:0;
+            }
             a{
                 text-decoration:none;
                 color:#000!important;
@@ -729,11 +743,13 @@ footer{
 .blog{
     position:relative;
     bottom:200px;
+    margin-bottom:-200px;
     .blog-sidebar{
         font-family:$headingfont;
         float: right;
         background-color:rgba(255,255,255,.8);
         padding:20px;
+        margin-left:20px;
         .sidebar-section{
             margin-bottom:20px;
             h1{
