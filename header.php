@@ -16,14 +16,17 @@
 
 <!-- jquery -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<!--     <meta name="viewport" content="width=device-width,initial-scale=1"> -->
 
 <!-- slider -->
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.royalslider.min.js"></script>
 <!-- fancybox -->
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.fancybox.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.fancybox.pack.js"></script>
+<!-- sticky -->
+    <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.stickyscroll.js"></script>
 <!-- custom scripts -->
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/scroll.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/scripts.js"></script>
     <?php wp_head(); ?>
 </head>

@@ -27,4 +27,8 @@ jQuery(document).ready(function($) {
 
   });
 
+/// sticky
+
+  $('#sticky-menu').stickyScroll({ container: '.services-contiainer' });
+
 });
