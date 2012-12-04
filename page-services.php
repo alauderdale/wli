@@ -21,6 +21,7 @@ Template Name: Services
             Our Services
         </h1>
     </div>
+    <div class="clearfix"></div>
     <?php while ( $servicesloop->have_posts() ) : $servicesloop->the_post(); ?>
         <section class="service">
             <div class="wrapped">

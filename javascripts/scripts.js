@@ -4,15 +4,28 @@ jQuery(document).ready(function($) {
 
 $('.get-started-link').mouseover(function(){
 
-  $(this).css('background-position','140px 5px');
+  $(this).css('background-position','135px 3px');
 
 });
 
 $('.get-started-link').mouseout(function(){
 
-  $(this).css('background-position','135px 5px');
+  $(this).css('background-position','130px 3px');
 
 });
+
+
+/// menu
+
+    $(window).scroll(function(){
+     var divOffset = $('.menu-change').offset();
+     if(window.scrollY > divOffset.top ){
+        $('.main-nav').addClass('small-nav');
+     }
+     if(window.scrollY < divOffset.top){
+        $('.main-nav').removeClass('small-nav');
+     }
+    });
 
 // royal slider
 

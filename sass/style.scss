@@ -350,19 +350,52 @@ em{
 
 /* Main Nav */
 
+.menu-change{
+    display:block;
+    position:relative;
+    top:10px;
+    height:10px;
+    width: 100%;
+}
+
 .active, .current_page_item{
     padding-bottom:10px;
     border-bottom:solid $redColor 1px;
 }
 
+.small-nav{
+    padding:1px!important;
+    border-bottom:none!important;
+    background-color:rgba(255,255,255,1)!important;
+    @include box-shadow(0 1px 0px rgba(0,0,0, .1), inset 0 1px 2px rgba(0,0,0,.1));
+    .logo{
+        a{
+            background-position:-11px -87px;
+            width: 47px!important;
+            height: 50px!important; 
+        }
+
+    }
+    .menu-main-container{
+        top:-68px!important;
+    }
+    .get-started-link{
+        top:15px!important;
+    }
+    .current_page_item{
+        padding-bottom:5px!important;
+    }
+}
+
 .main-nav{
+    border-bottom:1px #fff solid!important;
+    @include transition-duration(.5s);
     width: 100%;
     background-color:rgba(255,255,255,.9);
     padding:10px 0;
     float: left;
     margin-top:40px;
     font-family: $headingfont;
-    @include box-shadow(0 1px 2px rgba(0,0,0,.1), inset 0 1px 2px rgba(0,0,0,.1));
     .logo {
         z-index:2;
         a{
@@ -372,7 +405,7 @@ em{
                 margin:0 20px;
                 background-image:url(../images/logo.png);  
                 opacity:1;
-                @include transition-duration(.1s);
+                @include transition-duration(.3s);
                 z-index:2;
                 &:hover{
                     opacity:.8;
@@ -384,9 +417,10 @@ em{
         top:33px;
         padding-right:50px;
         background:url(../images/start-proj.png) no-repeat;
-        background-position:135px 5px;
+        background-position:130px 3px;
         z-index:2;
         @include transition-duration(.3s);
+        font-size:9pt;
     }
     .menu-main-container{
         display: table;   /* Allow the centering to work */
