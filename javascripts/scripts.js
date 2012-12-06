@@ -1,18 +1,19 @@
 jQuery(document).ready(function($) {
 
-/// get started
 
-$('.get-started-link').mouseover(function(){
 
-  $(this).css('background-position','135px 3px');
+//share
 
-});
+$('a.share').click(function(){
 
-$('.get-started-link').mouseout(function(){
-
-  $(this).css('background-position','130px 3px');
+  $(this).closest('ul').prev('.social-share').toggle('block');
+  console.log('Testing console');
 
 });
+
+//contact placeholder
+
+
 
 
 /// menu
@@ -56,7 +57,5 @@ $('.get-started-link').mouseout(function(){
 
 /// sticky
 
-  $('#sticky-menu').stickyScroll({ container: '.services-contiainer' });
-  $('.blog-sidebar').stickyScroll({ container: '.blog' });
 
 });

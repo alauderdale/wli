@@ -58,9 +58,9 @@ Template Name: About
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="overlay-link right overlay-link-right">
-        <a class="text-right  arrow-link" href="#">We're here to help, drop us a line</a> 
-    </div>
+    <a href="index.php?pagename=contact" class="text-right   overlay-link right overlay-link-right">
+        <span class="arrow-link">We're here to help, drop us a line</span>
+    </a>
     <div class="clearfix"></div>
     <div class="wrapped">  
         <h1 class="heading-borders">

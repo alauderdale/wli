@@ -58,7 +58,7 @@ Template Name: Home
                 Let Us Guide The Way
             </h2>
             <div class="home-descript-copy">
-                <div class="gold large">
+                <div class="gold">
                     <!--start the loop-->
                     <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
@@ -68,8 +68,8 @@ Template Name: Home
                     <?php endif; ?>
                 </div>
             </div>
-            <a class="arrow-link" href="#">
-                Let&apos;s find a strategy tailored to your goals
+            <a class="arrow-link" href="index.php?pagename=about">
+                Learn more about our company
             </a>   
         </div>
     </div>

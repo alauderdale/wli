@@ -47,7 +47,7 @@
     </div><!-- end adminbar -->
     <div class="main-nav">
         <div class="logo left"><a href="<?php echo get_option('home'); ?>"></a></div>
-        <a class="get-started-link uppercase right" href="#">Start a Project</a>
+        <a class="get-started-link uppercase right" href="index.php?pagename=contact">Start a Project</a>
         <div class="clearfix"></div>
         <div class="menu-contain">
             <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) );   ?>            

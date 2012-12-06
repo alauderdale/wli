@@ -34,8 +34,9 @@ Template Name: contact
                 <div class="two-col left">
                     <h3 class="uppercase">Stop By</h3>
                     <p>
-                        950 S Cherry St #505
-                        Denver, CO 80246
+                        950 S Cherry St #505<br/>
+                        Denver, CO 80246<br/>
+                        United States
                     </p>
                 </div>
                 <div class="two-col left">
@@ -45,6 +46,11 @@ Template Name: contact
                         F+ 1877.678.6543 <br/>
                         <a href="mailto:info@wealthlagacyinstitute.com">info@wealthlagacyinstitute.com</a>
                     </p>
+                </div>
+                <div class="eleven-col left">
+                    <div class="map">
+                        <iframe width="500" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=wealth+legacy+institute+denver&amp;aq=&amp;sll=39.695795,-104.923382&amp;sspn=0.032757,0.053215&amp;ie=UTF8&amp;hq=wealth+legacy+institute&amp;hnear=Denver,+Colorado&amp;t=m&amp;cid=2056682025475608752&amp;ll=39.714054,-104.908447&amp;spn=0.066025,0.145912&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
+                    </div>
                 </div>
             </div>
     </div>

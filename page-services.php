@@ -36,7 +36,7 @@ Template Name: Services
                     <div class="six-col left"> 
                         <h2><?php the_title(); ?> </h2>
                         <?php the_content(); ?> 
-                        <h3>we help families  focus on:</h3>
+                        <h3><?php echo get_post_meta($post->ID, 'title_text', true); ?></h3>
                         <ul>
                             <?php 
                                 $product_terms = wp_get_object_terms($post->ID, 's_highlight');
@@ -66,8 +66,8 @@ Template Name: Services
                     </div>
                 </div>
             </div>
-            <a href="#" class="text-right   overlay-link right overlay-link-right">
-                <span class="arrow-link">We're here to help, drop us a line</span>
+            <a href="index.php?pagename=contact" class="text-right   overlay-link right overlay-link-right">
+                <span class="arrow-link"><?php echo get_post_meta($post->ID, 'cta_text', true); ?></span>
             </a>
         </section>
     <?php endwhile; ?>

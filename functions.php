@@ -8,6 +8,7 @@
     
     register_nav_menu( 'main_nav', __( 'Main navigation menu', 'mytheme' ) );
 
+
     //    exerpt
 
     function new_excerpt_more( $more ) {
@@ -222,6 +223,13 @@
             'priority' => 'high',
             'fields' => array(
                 array(
+                    'name' => 'Main title',
+                    'desc' => 'enter the title for summary',
+                    'id' => 'title_text',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
                     'name' => 'Summary title 1',
                     'desc' => 'enter title',
                     'id' => 'sum_title_1',
@@ -250,7 +258,7 @@
                     'std' => ''
                 ),
                 array(
-                    'name' => 'Summary 3',
+                    'name' => 'Summary 2',
                     'desc' => 'enter title',
                     'id' => 'sum_2',
                     'type' => 'textarea',
@@ -261,6 +269,13 @@
                     'desc' => 'enter title',
                     'id' => 'sum_3',
                     'type' => 'textarea',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Call to action text',
+                    'desc' => 'enter the text for this services call to action',
+                    'id' => 'cta_text',
+                    'type' => 'text',
                     'std' => ''
                 ),
             )

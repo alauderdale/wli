@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="hero" style="background-image:url(<?php bloginfo('template_url'); ?>/images/blog_bg.png);">
-        <div class="wrapped hero-content">
+        <div class="wrapped hero-content blog-hero">
             <h1>Ideas &amp; Insights</h1>
         </div><!-- end hero content -->
     </div><!-- end hero -->
@@ -31,6 +31,9 @@
                         <div class="content">
                             <?php the_excerpt(); ?> 
                         </div>
+                        <div class="social-share">
+                            <?php if(function_exists('kc_add_social_share')) kc_add_social_share(); ?>
+                        </div>
                         <ul class="post-meta">
                             <li>
                                 <a href="<?php the_permalink(); ?>" class="arrow-link continue-reading">
@@ -38,7 +41,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="share">
+                                <a href="#" onclick="return false" class="share">
                                     Share
                                 </a>
                             </li>
