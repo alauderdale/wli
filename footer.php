@@ -12,7 +12,9 @@
                             <h2>
                                 <?php the_title(); ?>
                             </h2>
-                            <?php the_excerpt(); ?>
+                            <p>
+                                <?php echo excerpt(15); ?>
+                            </p>
                         </a>
                     </div>
                 <?php endwhile; ?>
