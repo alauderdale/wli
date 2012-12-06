@@ -81,7 +81,9 @@ Template Name: About
                 </a>
                 <h3><?php the_title(); ?></h3>
                 <p class="gold"><?php echo get_post_meta($post->ID, 'job_title', true); ?></p>
-                <?php the_excerpt(); ?>
+                <p>
+                    <?php echo excerpt(20); ?>
+                </p>
                 <a href="<?php the_permalink(); ?>" class="arrow-link fancybox fancybox.ajax">
                     See More
                 </a>
