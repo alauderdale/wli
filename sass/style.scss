@@ -50,7 +50,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 body{
      font-family: $bodyFont;
-     background-color:#fafafa;
+     background-color:#fff;
 }
 
 /* links */
@@ -223,7 +223,6 @@ h1{
 
 h2{
     font-size:15pt;
-    letter-spacing:1px;
     font-weight:bold;
     color:$darkColor;
     margin-bottom:20px;
@@ -655,6 +654,7 @@ footer{
     /* partners */
 
 .partners{
+    margin-bottom:20px;
     .partner{
         &:nth-child(1n){
             a{

@@ -52,7 +52,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* line 51, ../sass/style.scss */
 body {
   font-family: "minion-pro";
-  background-color: #fafafa;
+  background-color: #fff;
 }
 
 /* links */
@@ -273,13 +273,12 @@ h1 {
 /* line 224, ../sass/style.scss */
 h2 {
   font-size: 15pt;
-  letter-spacing: 1px;
   font-weight: bold;
   color: #404040;
   margin-bottom: 20px;
 }
 
-/* line 232, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 h3 {
   font-size: 12pt;
   font-weight: bold;
@@ -288,7 +287,7 @@ h3 {
   letter-spacing: 1px;
 }
 
-/* line 240, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 h4 {
   margin-bottom: 10px;
   font-weight: bold;
@@ -296,7 +295,7 @@ h4 {
   font-weight: lighter;
 }
 
-/* line 248, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 p {
   color: #3a3a3a;
   line-height: 150%;
@@ -304,11 +303,11 @@ p {
   font-size: 11pt;
 }
 
-/* line 255, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 ul {
   margin: 10px 0 10px 25px;
 }
-/* line 257, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 ul li {
   margin: 10px 0;
   font-size: 11pt;
@@ -316,68 +315,68 @@ ul li {
   margin-left: 10px;
 }
 
-/* line 265, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 em {
   font-style: italic;
 }
 
-/* line 269, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 272, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 276, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 .big-letter:first-letter {
   font-size: 38pt;
   font-style: italic;
 }
 
-/* line 281, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .large {
   font-size: 14pt;
 }
-/* line 283, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .large p {
   font-size: 14pt;
 }
 
-/* line 288, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .heading-borders {
   border-top: solid 3px #c6c0a8;
   border-bottom: solid 1px #8e8152;
   padding: 10px 0;
 }
 
-/* line 294, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 297, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
 /* Admin Bar */
-/* line 304, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .top-padding {
   width: 100%;
   float: left;
   padding-top: 38px;
 }
 
-/* line 312, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 .admin-bar, .main-nav {
   position: fixed;
   z-index: 999;
 }
 
-/* line 317, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .admin-bar {
   color: #472311;
   font-family: "myriad-pro", Arial, Sans-Serif;
@@ -388,22 +387,22 @@ em {
   padding: 10px 0 15px 0px;
   z-index: 100;
 }
-/* line 326, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .admin-bar .admin-bar-content {
   float: right;
   margin-right: 20px;
 }
-/* line 329, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .admin-bar .admin-bar-content p {
   float: left;
   font-size: 8pt;
   margin-bottom: 0;
 }
-/* line 333, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 .admin-bar .admin-bar-content p:first-of-type {
   margin-right: 10px;
 }
-/* line 337, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 .admin-bar .admin-bar-content a.login-button {
   color: #fff;
   background-color: #472311;
@@ -423,13 +422,13 @@ em {
   transition-duration: 0.3s;
   font-size: 7pt;
 }
-/* line 348, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .admin-bar .admin-bar-content a.login-button:hover {
   background-color: #984b24;
 }
 
 /* Main Nav */
-/* line 357, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .menu-change {
   display: block;
   position: relative;
@@ -438,13 +437,13 @@ em {
   width: 100%;
 }
 
-/* line 365, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .active, .current_page_item {
   padding-bottom: 10px;
   border-bottom: solid #472311 1px;
 }
 
-/* line 370, ../sass/style.scss */
+/* line 369, ../sass/style.scss */
 .small-nav {
   padding: 1px!important;
   border-bottom: none!important;
@@ -453,26 +452,26 @@ em {
   -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 376, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 .small-nav .logo a {
   background-position: -11px -87px;
   width: 47px!important;
   height: 50px!important;
 }
-/* line 383, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 .small-nav .menu-main-container {
   top: -68px !important;
 }
-/* line 386, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .small-nav .get-started-link {
   top: 15px!important;
 }
-/* line 389, ../sass/style.scss */
+/* line 388, ../sass/style.scss */
 .small-nav .current_page_item {
   padding-bottom: 5px!important;
 }
 
-/* line 394, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 .main-nav {
   border-bottom: 1px rgba(255, 255, 255, 0.9) solid !important;
   -webkit-transition-duration: 0.5s;
@@ -487,11 +486,11 @@ em {
   margin-top: 40px;
   font-family: "myriad-pro", Arial, Sans-Serif;
 }
-/* line 403, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 .main-nav .logo {
   z-index: 2;
 }
-/* line 405, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 .main-nav .logo a {
   width: 251px;
   height: 73px;
@@ -506,11 +505,11 @@ em {
   transition-duration: 0.3s;
   z-index: 2;
 }
-/* line 414, ../sass/style.scss */
+/* line 413, ../sass/style.scss */
 .main-nav .logo a:hover {
   opacity: .8;
 }
-/* line 419, ../sass/style.scss */
+/* line 418, ../sass/style.scss */
 .main-nav .get-started-link {
   position: relative;
   top: 36px;
@@ -526,11 +525,11 @@ em {
   font-size: 9pt;
   margin-right: 20px;
 }
-/* line 429, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 .main-nav .get-started-link:hover {
   background-position: 125px 2px;
 }
-/* line 433, ../sass/style.scss */
+/* line 432, ../sass/style.scss */
 .main-nav .menu-main-container {
   display: table;
   /* Allow the centering to work */
@@ -540,12 +539,12 @@ em {
   top: -73px;
   margin-bottom: -73px;
 }
-/* line 441, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 .main-nav .menu-contain {
   position: relative;
   z-index: 0;
 }
-/* line 446, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 .main-nav ul {
   list-style: none;
   position: relative;
@@ -553,7 +552,7 @@ em {
   margin-left: 0;
   float: left;
 }
-/* line 452, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 .main-nav ul li {
   display: inline;
   float: left;
@@ -562,11 +561,11 @@ em {
   font-size: 10pt;
   text-shadow: 0 1px 0 #fff;
 }
-/* line 459, ../sass/style.scss */
+/* line 458, ../sass/style.scss */
 .main-nav ul li:last-of-type {
   margin-right: 0;
 }
-/* line 462, ../sass/style.scss */
+/* line 461, ../sass/style.scss */
 .main-nav ul li a {
   text-decoration: none;
   color: #000!important;
@@ -578,13 +577,13 @@ em {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 468, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .main-nav ul li a:hover {
   color: #984b24 !important;
 }
 
 /* hero */
-/* line 479, ../sass/style.scss */
+/* line 478, ../sass/style.scss */
 .hero {
   width: 100%;
   height: 290px;
@@ -602,7 +601,7 @@ em {
   -moz-box-shadow: 0 1px 0 white;
   box-shadow: 0 1px 0 white;
 }
-/* line 493, ../sass/style.scss */
+/* line 492, ../sass/style.scss */
 .hero h1 {
   font-family: "myriad-pro", Arial, Sans-Serif;
   text-transform: none;
@@ -612,7 +611,7 @@ em {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   margin-bottom: 0;
 }
-/* line 502, ../sass/style.scss */
+/* line 501, ../sass/style.scss */
 .hero h2 {
   font-size: 28pt;
   color: #fff;
@@ -621,12 +620,12 @@ em {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
   font-family: "minion-pro";
 }
-/* line 510, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .hero .hero-learn-more {
   position: relative;
 }
 
-/* line 515, ../sass/style.scss */
+/* line 514, ../sass/style.scss */
 .and {
   width: 54px;
   height: 55px;
@@ -639,12 +638,12 @@ em {
 }
 
 /* home */
-/* line 530, ../sass/style.scss */
+/* line 529, ../sass/style.scss */
 .border-bottom {
   border-bottom: solid 1px #8e8152;
 }
 
-/* line 534, ../sass/style.scss */
+/* line 533, ../sass/style.scss */
 .home-descript-copy {
   -webkit-columns: 120px 2;
   -moz-columns: 120px 2;
@@ -654,7 +653,7 @@ em {
 }
 
 /* footer */
-/* line 544, ../sass/style.scss */
+/* line 543, ../sass/style.scss */
 footer {
   width: 100%;
   float: left;
@@ -664,11 +663,11 @@ footer {
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-/* line 550, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 footer p {
   font-size: 10pt;
 }
-/* line 553, ../sass/style.scss */
+/* line 552, ../sass/style.scss */
 footer h1 {
   text-transform: uppercase;
   font-size: 12pt;
@@ -679,11 +678,11 @@ footer h1 {
   padding: 10px 0;
   margin-bottom: 20px;
 }
-/* line 563, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 footer a {
   display: block;
 }
-/* line 565, ../sass/style.scss */
+/* line 564, ../sass/style.scss */
 footer a.footer-button {
   font-family: "myriad-pro", Arial, Sans-Serif;
   color: #fff;
@@ -700,11 +699,11 @@ footer a.footer-button {
   -moz-box-shadow: 0 1px 0 white, inset 0 1px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 0 white, inset 0 1px 2px rgba(0, 0, 0, 0.5);
 }
-/* line 574, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
 footer a.footer-button:hover {
   background-color: #777;
 }
-/* line 578, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 footer a:hover {
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
@@ -712,7 +711,7 @@ footer a:hover {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 580, ../sass/style.scss */
+/* line 579, ../sass/style.scss */
 footer a:hover h2 {
   color: #984b24;
   -webkit-transition-duration: 0.2s;
@@ -721,13 +720,13 @@ footer a:hover h2 {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 587, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 footer h2 {
   margin-bottom: 5pt;
   font-size: 12pt;
   font-weight: normal;
 }
-/* line 592, ../sass/style.scss */
+/* line 591, ../sass/style.scss */
 footer .footer-menu {
   background-color: #2a2a2a;
   width: 100%;
@@ -736,18 +735,18 @@ footer .footer-menu {
   font-family: "myriad-pro", Arial, Sans-Serif;
   font-size: 10pt;
 }
-/* line 599, ../sass/style.scss */
+/* line 598, ../sass/style.scss */
 footer .footer-menu p {
   color: #fff;
   margin-right: 160px;
   font-weight: lighter;
 }
-/* line 604, ../sass/style.scss */
+/* line 603, ../sass/style.scss */
 footer .footer-menu ul {
   list-style: none;
   margin: 0;
 }
-/* line 607, ../sass/style.scss */
+/* line 606, ../sass/style.scss */
 footer .footer-menu ul li {
   float: left;
   margin: 0;
@@ -755,50 +754,54 @@ footer .footer-menu ul li {
   text-transform: uppercase;
   font-size: 8pt;
 }
-/* line 613, ../sass/style.scss */
+/* line 612, ../sass/style.scss */
 footer .footer-menu ul li a {
   color: #999999;
 }
-/* line 616, ../sass/style.scss */
+/* line 615, ../sass/style.scss */
 footer .footer-menu ul li a:hover {
   color: #fff;
 }
 
 /* about */
-/* line 627, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .about-image {
   z-index: 999;
   margin-top: 70px;
 }
 
-/* line 632, ../sass/style.scss */
+/* line 631, ../sass/style.scss */
 .about-process {
   margin-top: 20px;
 }
 
-/* line 636, ../sass/style.scss */
+/* line 635, ../sass/style.scss */
 .process-hero {
   margin-bottom: 20px;
 }
 
 /* Meet Us */
-/* line 642, ../sass/style.scss */
+/* line 641, ../sass/style.scss */
 .meet-us {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* line 645, ../sass/style.scss */
+/* line 644, ../sass/style.scss */
 .meet-us img {
   width: 220px;
   height: auto;
   margin-bottom: 10px;
 }
-/* line 650, ../sass/style.scss */
+/* line 649, ../sass/style.scss */
 .meet-us p {
   margin-bottom: 5px;
 }
 
 /* partners */
+/* line 656, ../sass/style.scss */
+.partners {
+  margin-bottom: 20px;
+}
 /* line 660, ../sass/style.scss */
 .partners .partner:nth-child(1n) a {
   margin-left: 0;

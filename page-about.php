@@ -100,7 +100,7 @@ Template Name: About
                   </h1>';
             }
         ?>
-        <div class="partners margin-top left">
+        <div class="partners full-width margin-top left">
             <?php while ( $partnerloop->have_posts() ) : $partnerloop->the_post(); ?>
                 <div class="partner left">
                     <a class="left" href="<?php echo get_post_meta($post->ID, 'partner_url', true); ?>" target="_blank">
