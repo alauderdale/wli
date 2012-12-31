@@ -35,6 +35,11 @@ Template Name: About
                 <?php endif; ?>
             </div>
         </div>
+    </div>
+    <a style="margin-top:-200px;" href="index.php?pagename=contact" class="text-right   overlay-link right overlay-link-right">
+        <span class="arrow-link">We're here to help, drop us a line</span>
+    </a>
+    <div class="wrapped">
         <div class="clearfix"></div>
         <div>
             <h1 class="heading-borders">
@@ -58,10 +63,6 @@ Template Name: About
         </div>
     </div>
     <div class="clearfix"></div>
-    <a href="index.php?pagename=contact" class="text-right   overlay-link right overlay-link-right">
-        <span class="arrow-link">We're here to help, drop us a line</span>
-    </a>
-    <div class="clearfix"></div>
     <div class="wrapped">  
         <h1 class="heading-borders">
                 Meet Us
@@ -79,11 +80,14 @@ Template Name: About
                         } 
                     ?>
                 </a>
+                <div class="clearfix"></div>
                 <h3><?php the_title(); ?></h3>
-                <p class="gold"><?php echo get_post_meta($post->ID, 'job_title', true); ?></p>
-                <p>
-                    <?php echo excerpt(20); ?>
-                </p>
+                <div class="descript">
+                    <p class="gold"><?php echo get_post_meta($post->ID, 'job_title', true); ?></p>
+                    <p>
+                        <?php echo excerpt(20); ?>
+                    </p>
+                </div>
                 <a href="<?php the_permalink(); ?>" class="arrow-link fancybox fancybox.ajax">
                     See More
                 </a>
@@ -96,7 +100,7 @@ Template Name: About
         ?>
         <?php if ( post_type_exists('partner') ) { 
             echo '<h1 class="heading-borders">
-                    Trusted By
+                    Forward Thinking Companies
                   </h1>';
             }
         ?>

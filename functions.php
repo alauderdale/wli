@@ -48,6 +48,21 @@
       return $content;
     }
 
+    /*** Register our sidebars and widgetized areas.**/
+    function wli_widgets_init() {
+
+        register_sidebar( array(
+            'name' => 'twitter',
+            'id' => 'twitter',
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '',
+            'after_title' => '',
+        ) );
+        
+    }
+    add_action( 'widgets_init', 'wli_widgets_init' ); 
+
 
     //create post types
     

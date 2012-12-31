@@ -21,26 +21,11 @@
             </div>
             <div class="footer-col four-col left">
                 <h1>Twitter</h1>
-                <div class="footer-post">
-                    <a href="#">
-                        <p>
-                            @wealthLegacyInstitute: We have "A Question for You” on the blog. @Kimkurtis has a crazy idea. http://t.co/vcighM1n
-                        </p>
-                    </a>
-                </div>
-                <div class="footer-post">
-                    <a href="#">
-                        <p>
-                            @wealthLegacyInstitute: We have "A Question for You” on the blog. @Kimkurtis has a crazy idea. http://t.co/vcighM1n
-                        </p>
-                    </a>
-                </div>
-                <div class="footer-post">
-                    <a href="#">
-                        <p>
-                            @wealthLegacyInstitute: We have "A Question for You” on the blog. @Kimkurtis has a crazy idea. http://t.co/vcighM1n
-                        </p>
-                    </a>
+                <div class="footer-twitter">
+                <?php 
+                    if ( dynamic_sidebar('twitter') ) : 
+                ?>
+                <?php endif; ?>
                 </div>
             </div>
             <div class="footer-col four-col left">
@@ -76,7 +61,25 @@
                     &copy; 2012 Wealth Legacy Institute        
                     </p>                                      
                 </div>
-                <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) );   ?>
+                <div class="footer-nav" >
+                    <?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) );   ?>
+                </div>
+                <div class="right">
+                    <ul class="footer-social">
+                        <li>
+                            <a href="https://twitter.com/WLILegacy/status/277109387552772096" target="_blank" class="twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.facebook.com/pages/Wealth-Legacy-Institute/110178622336160" target="_blank" class="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.brightscope.com/financial-planning/firm/63768/Wealth-Legacy-Institute-Inc/" target="_blank" class="bs">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>

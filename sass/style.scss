@@ -115,10 +115,14 @@ a{
     }
 }
 .overlay-link-right{
-    padding-right:30%;
+    padding-right:31.7%;
 }
 
 /* global */
+
+.hidden{
+    display:none;
+}
 
 .block{
     display:block;
@@ -138,6 +142,10 @@ a{
 
 .full-width{
     width: 100%;
+}
+
+.full-height{
+    max-height: 100%!important;
 }
 
 .row{
@@ -285,7 +293,7 @@ em{
 }
 
 .heading-borders{
-    border-top:solid 3px tint($goldColor, 50%);
+    border-top:solid 2px $goldColor;
     border-bottom:solid 1px $goldColor;
     padding:10px 0;
 }
@@ -416,6 +424,7 @@ em{
         }  
     }
     .get-started-link{
+        display:none;
         position:relative;
         top:36px;
         padding-right:50px;
@@ -454,14 +463,12 @@ em{
             margin-right:30px;
             text-transform:uppercase;
             font-size:10pt;
-            text-shadow:0 1px 0 #fff;
             &:last-of-type{
                 margin-right:0;
             }
             a{
                 text-decoration:none;
                 color:#000!important;
-                color:$redColor;
                 padding-bottom:10px;
                 @include transition-duration(.2s);
                 &:hover{
@@ -534,6 +541,13 @@ em{
     @include columns(120px 2);
     width:100%;
     float: left;
+    margin-bottom:20px;
+}
+
+.teaser{
+    p{
+        min-height:136px;        
+    }
 
 }
 
@@ -546,6 +560,12 @@ footer{
     background-image:url(../images/footer_bg.png);
     padding:60px 0 0 0;
     @include box-shadow(inset 0 2px 4px rgba(0,0,0,.2));
+    .footer-twitter{
+        ul{
+            list-style:none;
+            margin-left:-7px!important;
+        }
+    }
     p{
         font-size:10pt;
     }
@@ -554,7 +574,6 @@ footer{
         font-size:12pt;
         font-family:$headingfont;
         font-weight:bold;
-        border-top:4px solid $ltGrayColor;
         border-bottom:1px solid $ltGrayColor;
         padding:10px 0;
         margin-bottom:20px;
@@ -589,12 +608,17 @@ footer{
         font-weight:normal;
     }
     .footer-menu{
+        border-top:$goldColor 4px solid;
         background-color:#2a2a2a;
         width:100%;
-        padding:40px 0 50px 0;
+        padding:40px 0 53px 0;
         margin-top:40px;
         font-family:$headingfont;
         font-size:10pt;
+        .menu-main-container{
+            margin-top:15px;
+            float: left;
+        }
         p{
             color:#fff;
             margin-right:160px;
@@ -603,6 +627,26 @@ footer{
         ul{
             list-style:none;
             margin:0;
+            margin-top:-10px;
+            &.footer-social{
+                li{
+                    float: left;
+                    a{
+                        width:37px;
+                        height:37px;
+                        display:block;
+                        &.twitter{
+                            background-image:url(../images/tw.png);
+                        }
+                        &.facebook{
+                            background-image:url(../images/fb.png);
+                        }
+                        &.bs{
+                            background-image:url(../images/bs.png);
+                        }
+                    }
+                }
+            }
             li{
                 float: left;
                 margin:0;
@@ -626,6 +670,11 @@ footer{
 .about-image{
     z-index:999;
     margin-top:70px;
+    img{
+        position:relative;
+        right: 367px;
+        top: -76px;
+    }
 }
 
 .about-process{
@@ -645,9 +694,19 @@ footer{
         width:220px;
         height:auto;
         margin-bottom:10px;
+        height:250px;
+        &:hover{
+            opacity:.8;
+        }
     }
     p{
         margin-bottom:5px;
+    }
+    h3{
+        min-height:55px;
+    }
+    .descript{
+        min-height:149px;
     }
 }
 
@@ -661,18 +720,19 @@ footer{
                 margin-left:0;
             } 
         }
-        &:nth-child(4n){
+        &:nth-child(6n){
             a{
                 margin-right:0;
             }
         }
         a{
+            background-color:#fff;
             border:1px solid #eee;
             margin:20px;
             margin-top:0;
             display:inline-block;
-            width: 223px;
-            height: 223px;
+            width: 140px;
+            height: 140px;
             @include border-radius(4px);
             @include box-shadow( 0 1px 0 #fff);
             transition: all 0.3s ease-in-out;
@@ -689,7 +749,7 @@ footer{
             }
 
             img{
-                width: 223px;
+                width: 140px;
                 height: auto;
             }
         }
@@ -702,7 +762,7 @@ footer{
     display:inline-block;
     padding:20px;
     .person-img{
-    width: 33%;
+    width: 34%;
     margin-right:20px;
     img{
         @include border-radius(5px);
@@ -724,6 +784,20 @@ footer{
     width:100%;
     float: left;
     padding:20px 0;
+    a{
+        &.more-service{
+            z-index:200;
+            text-decoration:underline!important;
+            margin-bottom:20px;
+            float: left!important;
+            font-weight:bold;
+        }
+    }
+    .service-content{
+        max-height:90px;
+        overflow:hidden;
+        margin-bottom:13px;
+    }
     &:nth-child(odd){
         background-image:url(../images/service_shadow.png);
         background-repeat:no-repeat;
@@ -753,6 +827,7 @@ footer{
 
     img{
         position:relative;
+        z-index:-2;
     }
 }
 
@@ -796,7 +871,8 @@ footer{
     .blog-sidebar{
         font-family:$headingfont;
         float: right;
-        background-color:rgba(255,255,255,.8);
+        background-color:rgba(255,255,255,1);
+        @include box-shadow(0 2px 10px rgba(0,0,0,.2));
         padding:20px;
         margin-left:20px;
         .sidebar-section{
@@ -885,7 +961,7 @@ footer{
 }
 .slider-caption{
     position:relative!important;
-    top:-366px!important;
+    top:-350px!important;
     background:none!important;
     h1{
         text-transform:none;

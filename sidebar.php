@@ -3,10 +3,11 @@
                     <h1>Categories</h1>
                     <ul>
                         <?php 
-                            $args = array(
-                            'title_li'           => __( '' ),
-                            ); 
-                        ?>
+                                $args = array(
+                                'title_li'           => __( '' ),
+                                'exclude'            => '1'
+                                ); 
+                                ?>
                         <?php wp_list_categories($args); ?> 
                     </ul>
                 </div>

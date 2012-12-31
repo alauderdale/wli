@@ -23,7 +23,7 @@ Template Name: Services
     </div>
     <div class="clearfix"></div>
     <?php while ( $servicesloop->have_posts() ) : $servicesloop->the_post(); ?>
-        <section class="service">
+        <section class="service" id="<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>">
             <div class="wrapped">
                 <div class="row service-top-info margin-top">
                     <div class="six-col left service-thumb"> 
@@ -35,7 +35,11 @@ Template Name: Services
                     </div>
                     <div class="six-col left"> 
                         <h2><?php the_title(); ?> </h2>
-                        <?php the_content(); ?> 
+                        <div class="service-content">
+                            <?php the_content(); ?> 
+                        </div>
+                        <a class="more-service left" href="#">More...</a>
+                        <div class="clearfix"></div>
                         <h3><?php echo get_post_meta($post->ID, 'title_text', true); ?></h3>
                         <ul>
                             <?php 

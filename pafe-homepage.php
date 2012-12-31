@@ -47,7 +47,7 @@ Template Name: Home
                     <?php the_title(); ?>
                 </h2>
                 <?php the_content(); ?>
-                <a class="arrow-link" href="<?php echo get_post_meta($post->ID, 'service_call_to_action_url', true); ?>"><?php echo get_post_meta($post->ID, 'service_call_to_action_text', true); ?></a>   
+                <a class="arrow-link" href="index.php?pagename=services"><?php echo get_post_meta($post->ID, 'service_call_to_action_text', true); ?></a>   
             </div>        
             <!-- end home service loop -->
             <?php endwhile; ?>

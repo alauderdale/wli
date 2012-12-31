@@ -11,6 +11,18 @@ $('a.share').click(function(){
 
 });
 
+
+//more service
+
+
+$('.service a.more-service').click(function(){
+
+  $(this).prev().addClass('full-height');
+  $(this).addClass('hidden');
+  return false;
+
+});
+
 //contact placeholder
 
 

@@ -36,10 +36,10 @@
     <div class="admin-bar">
         <div class="admin-bar-content right">
             <p>
-                Call us 1.877.444.4444
+                Call us 303.753.7578
             </p>
             <p>
-                <a class="login-button fancybox.iframe fancybox" href="https://www.junxureclientview.com/Pages/Login.aspx">   
+                <a class="login-button" href="https://www.junxureclientview.com/12447" target="_blank">   
                     client login
                 </a>
             </p>

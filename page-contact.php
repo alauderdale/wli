@@ -3,7 +3,11 @@
 Template Name: contact
  */
 ?>
-
+<style>
+.hero{
+    height:191px!important;
+}
+</style>
 <?php get_header(); ?>
 
 <div class="hero" style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>);">
