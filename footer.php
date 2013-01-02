@@ -78,6 +78,14 @@
                             <a href="http://www.brightscope.com/financial-planning/firm/63768/Wealth-Legacy-Institute-Inc/" target="_blank" class="bs">
                             </a>
                         </li>
+                        <li>
+                            <a href="http://www.linkedin.com/in/kimberlylcurtis" target="_blank" class="ln">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/in/kimberlylcurtis" target="_blank" class="gp">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

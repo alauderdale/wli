@@ -45,7 +45,7 @@ Template Name: About
             <h1 class="heading-borders">
                 Our Process
             </h1>
-            <div class="about-process text-center ">
+            <div class="about-process">
                 <div class="process-hero">
                     <img src="<?php bloginfo('template_url'); ?>/images/process_img.png"/>
                 </div>
