@@ -37,7 +37,7 @@
     <div class="admin-bar">
         <div class="admin-bar-content right">
             <p>
-                Call us 303.753.7578
+                Call Us 303.753.7578
             </p>
             <p>
                 <a class="login-button" href="https://www.junxureclientview.com/12447" target="_blank">   

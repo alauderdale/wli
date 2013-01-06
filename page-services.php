@@ -27,11 +27,14 @@ Template Name: Services
             <div class="wrapped">
                 <div class="row service-top-info margin-top">
                     <div class="six-col left service-thumb"> 
-                        <?php 
-                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                              the_post_thumbnail();
-                            } 
-                        ?>
+                        <a href="<?php
+                            $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");
+                            echo $imgsrc[0];
+                            ?>" class="fancybox">
+                            <img src="<?php
+                            echo $imgsrc[0];
+                            ?>" />
+                        </a>
                     </div>
                     <div class="six-col left"> 
                         <h2><?php the_title(); ?> </h2>

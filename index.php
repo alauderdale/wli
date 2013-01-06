@@ -29,7 +29,7 @@
                             ?>
                         </div>
                         <div class="content">
-                            <?php the_excerpt(); ?> 
+                            <?php the_content(); ?> 
                         </div>
                         <div class="social-share">
                             <?php if(function_exists('kc_add_social_share')) kc_add_social_share(); ?>

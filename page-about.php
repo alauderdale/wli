@@ -36,12 +36,12 @@ Template Name: About
             </div>
         </div>
     </div>
-    <a href="index.php?pagename=contact" class="text-right about-overlay   overlay-link right overlay-link-right">
+    <a href="index.php?pagename=contact" style="padding-right:28.3%;" class="text-right about-overlay   overlay-link right overlay-link-right">
         <span class="arrow-link">We're here to help, drop us a line</span>
     </a>
     <div class="wrapped">
         <div class="clearfix"></div>
-        <div>
+        <div class="process">
             <h1 class="heading-borders">
                 Our Process
             </h1>

@@ -58,7 +58,7 @@
             <div class="wrapped">
                 <div class="copyright left">
                     <p>
-                    &copy; 2012 Wealth Legacy Institute    
+                    &copy; 2012 Wealth Legacy Institute, Inc.   
                     <div class="terms-menu"> 
                         <?php wp_nav_menu( array( 'theme_location' => 'terms' ) );   ?> 
                     </div>

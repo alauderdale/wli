@@ -49,7 +49,7 @@ Template Name: contact
                 </div>
                 <div class="eleven-col left">
                     <div class="map">
-                        <iframe width="500" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=wealth+legacy+institute+denver&amp;aq=&amp;sll=39.695795,-104.923382&amp;sspn=0.032757,0.053215&amp;ie=UTF8&amp;hq=wealth+legacy+institute&amp;hnear=Denver,+Colorado&amp;t=m&amp;cid=2056682025475608752&amp;ll=39.714054,-104.908447&amp;spn=0.066025,0.145912&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
+                        <iframe width="500" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=wealth+legacy+institute+denver&amp;aq=&amp;sll=39.695795,-104.923382&amp;sspn=0.032757,0.053215&amp;ie=UTF8&amp;hq=wealth+legacy+institute&amp;hnear=Denver,+Colorado&amp;t=m&amp;cid=2056682025475608752&amp;ll=39.714054,-104.908447&amp;spn=0.066025,0.145912&amp;z=12&amp;iwloc=A&amp;output=embed&iwloc=near"></iframe>
                     </div>
                 </div>
             </div>
