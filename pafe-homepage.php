@@ -7,7 +7,7 @@ Template Name: Home
 <?php get_header(); ?>
 
 <!--     slider -->
-    <div class="slider ">
+    <div class="slider">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
             <?php
                 $sliderloop = new WP_Query( array( 'post_type' => 'slider_content') );

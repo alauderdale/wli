@@ -58,7 +58,10 @@
             <div class="wrapped">
                 <div class="copyright left">
                     <p>
-                    &copy; 2012 Wealth Legacy Institute        
+                    &copy; 2012 Wealth Legacy Institute    
+                    <div class="terms-menu"> 
+                        <?php wp_nav_menu( array( 'theme_location' => 'terms' ) );   ?> 
+                    </div>
                     </p>                                      
                 </div>
                 <div class="footer-nav" >
@@ -67,7 +70,7 @@
                 <div class="right">
                     <ul class="footer-social">
                         <li>
-                            <a href="https://twitter.com/WLILegacy/status/277109387552772096" target="_blank" class="twitter">
+                            <a href="http://www.linkedin.com/in/kimberlylcurtis" target="_blank" class="ln">
                             </a>
                         </li>
                         <li>
@@ -75,15 +78,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="https://twitter.com/WLILegacy/status/277109387552772096" target="_blank" class="twitter">
+                            </a>
+                        </li>
+                        <li>
                             <a href="http://www.brightscope.com/financial-planning/firm/63768/Wealth-Legacy-Institute-Inc/" target="_blank" class="bs">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/kimberlylcurtis" target="_blank" class="ln">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/kimberlylcurtis" target="_blank" class="gp">
                             </a>
                         </li>
                     </ul>

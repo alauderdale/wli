@@ -36,7 +36,7 @@ Template Name: About
             </div>
         </div>
     </div>
-    <a style="margin-top:-200px;" href="index.php?pagename=contact" class="text-right   overlay-link right overlay-link-right">
+    <a href="index.php?pagename=contact" class="text-right about-overlay   overlay-link right overlay-link-right">
         <span class="arrow-link">We're here to help, drop us a line</span>
     </a>
     <div class="wrapped">
@@ -72,7 +72,7 @@ Template Name: About
                 $peopleloop = new WP_Query( array( 'post_type' => 'people') );
             ?>
             <?php while ( $peopleloop->have_posts() ) : $peopleloop->the_post(); ?>
-            <div class="three-col left">
+            <div class="three-col person left">
                 <a href="<?php the_permalink(); ?>" class="fancybox fancybox.ajax">
                     <?php 
                         if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.

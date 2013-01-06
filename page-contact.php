@@ -3,14 +3,10 @@
 Template Name: contact
  */
 ?>
-<style>
-.hero{
-    height:191px!important;
-}
-</style>
+
 <?php get_header(); ?>
 
-<div class="hero" style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>);">
+<div class="hero contact-hero" style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>);">
         <div class="wrapped hero-content">
             <h1><?php echo get_post_meta($post->ID, 'hero_title', true); ?></h1>
             <h2><?php echo get_post_meta($post->ID, 'hero_sub', true); ?></h2>

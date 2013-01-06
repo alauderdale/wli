@@ -1,4 +1,14 @@
 <?php
+    
+    //global options
+
+
+
+
+
+
+
+    //thumbnails
 
     if ( function_exists( 'add_theme_support' ) ) {
       add_theme_support( 'post-thumbnails' );
@@ -7,6 +17,7 @@
     //main nav
     
     register_nav_menu( 'main_nav', __( 'Main navigation menu', 'mytheme' ) );
+    register_nav_menu( 'terms', __( 'terms navigation menu in footer', 'mytheme' ) );
 
 
     //    exerpt
@@ -251,6 +262,27 @@
                     'name' => 'Job Title',
                     'desc' => 'add text for job title',
                     'id' => 'job_title',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Twitter Url',
+                    'desc' => 'add url for Twitter',
+                    'id' => 'twitter_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Facebook Url',
+                    'desc' => 'add url for Facebook',
+                    'id' => 'facebook_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'LinkedIn Url',
+                    'desc' => 'add url for LinkedIn',
+                    'id' => 'linkedin_url',
                     'type' => 'text',
                     'std' => ''
                 ),
