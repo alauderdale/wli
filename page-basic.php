@@ -6,7 +6,7 @@ Template Name: legal/terms
 <?php get_header(); ?>
 
 <div class="hero terms-hero" style="background-image:url(<?php bloginfo('template_url'); ?>/images/page_bg.png);">
-        <div class="wrapped hero-content blog-hero">
+        <div class="wrapped hero-content">
             <h1><?php the_title(); ?></h1>
         </div><!-- end hero content -->
     </div><!-- end hero -->

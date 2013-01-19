@@ -17,7 +17,7 @@
                                 <?php the_title(); ?> 
                         </h1>
                         <h3 class="date">
-                            <?php the_date(); ?> 
+                            <?php the_date(); ?>, <a href="<?php the_permalink(); ?>#comments"><?php comments_number( 'No Comments', '1 Comment' , '% Comments' );?></a>
                         </h3>
                         <div class="featured-img">
                             <?php 
@@ -40,6 +40,9 @@
                             </li>
                         </ul>
                         <div class="clearfix"></div>
+                    </div>
+                    <div class="comments post">
+                        <?php comments_template(); ?>
                     </div>
                 <!--end the loop-->
                 <?php endwhile; ?>

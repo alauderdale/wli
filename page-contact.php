@@ -33,11 +33,10 @@ Template Name: contact
             <div class="row margin-top">
                 <div class="two-col left">
                     <h3 class="uppercase">Stop By</h3>
-                    <p>
-                        950 S Cherry St #505<br/>
-                        Denver, CO 80246<br/>
-                        United States
-                    </p>
+                    <?php 
+                        if ( dynamic_sidebar('address') ) : 
+                    ?>
+                    <?php endif; ?>
                 </div>
                 <div class="two-col left">
                     <h3 class="uppercase">Call Us</h3>

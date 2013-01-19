@@ -260,7 +260,6 @@ h3{
     font-weight:bold;
     color:$darkColor;
     margin-bottom:10px;
-    letter-spacing:1px;
 }
 
 h4{
@@ -722,7 +721,7 @@ footer{
 /* about */
 
     a.about-overlay{
-        margin-top:-200px;
+        margin-top:-350px;
     }
 
 .about-image{
@@ -750,6 +749,7 @@ footer{
 .process{
     float: left;
     margin-bottom:20px;
+    margin-top:-160px;
 }
 
     /* Meet Us */
@@ -1059,6 +1059,83 @@ ul{
     }
 }
 
+/* Comments */
+
+.comments{
+    
+
+    .comment-author{
+        font-family:$headingfont;
+    }
+    .comment-meta{
+        display:none;
+    }
+    img{
+        float: left;
+        margin-right:20px;
+    }
+    ul{
+        &.commentlist{
+            list-style:none;
+            margin-left:0;
+        }
+        li{
+            &.comment{
+                margin:10px 0;
+                padding:10px 0;
+                border-bottom:solid 1px #ccc;
+                width:100%;
+                display:block;
+                clear: both;
+                float: left;
+                &:last-of-type{
+                    border-bottom:none;
+                    margin-bottom:40px;
+                }
+                p{
+                    margin-top:10px;
+                    margin-left:80px;
+                }
+            }
+        }
+    }
+    .comment-reply-link{
+        display:none;
+    }
+}
+
+.respond{
+   
+    h1{
+        font-weight:normal;
+    }
+    label{
+        p{
+            margin-bottom:3px;           
+        }
+
+    }
+    .respond-left{
+        width:230px;
+        input{
+            padding:10px;
+            @include box-shadow(none);
+            border:1px solid #bbb;
+            margin-bottom:10px;
+            width:84%;
+        }
+    }
+    .respond-right{
+        width:412px;
+        textarea{
+            @include box-shadow(none);
+            border:1px solid #bbb;
+            width:100%;
+            height:127px;
+        }
+    }
+}
+
 /* Slider */
 
 .slider{
@@ -1265,7 +1342,9 @@ and (max-width : 800px) {
     .process-hero {
         display:none;
     }
-
+    .process{
+        margin-top:0;
+    }
 
 
 
@@ -1308,7 +1387,7 @@ and (max-width : 800px) {
     }
 
     .hero, .contact-hero{
-        height:145px!important;
+        height:auto!important;
         padding-top:90px;
           h1{
             font-size:20pt!important;            
@@ -1317,7 +1396,9 @@ and (max-width : 800px) {
             font-size:12pt!important;            
         }
     }
-
+    .blog-hero{
+        height:150px!important;
+    }
     .home-descript-copy{
         @include columns(1);
     }
@@ -1380,6 +1461,7 @@ and (max-width : 800px) {
             padding-bottom:10px!important;
         }
     .main-nav, .small-nav {
+        background-color:#fff;
         @include box-shadow(0 1px 0px rgba(0,0,0, .1));
         margin-top:40px!important;
         padding:10px 0!important;
@@ -1446,7 +1528,7 @@ and (max-width : 800px) {
     .teaser {
         margin-bottom:20px!important;
         padding-bottom:20px!important;
-        border-bottom:solid 1px #666;
+        border-bottom:solid 1px #eee;
         &:last-of-type{
             margin-bottom:-20px!important;
             padding-bottom:0;
@@ -1463,6 +1545,9 @@ and (max-width : 800px) {
         }
         .four-col{
             margin-bottom:40px!important;
+        }
+        .footer-post{
+            margin-bottom:15px;
         }
         a{
             &.footer-button{
@@ -1488,6 +1573,15 @@ and (max-width : 800px) {
                 width:90%!important;
                 padding:2px!important;
             }
+        textarea{
+            position:relative;
+            top:-106px;
+            margin-bottom:-106px;
+        }
+         input[type="submit"]{
+            position:relative!important;
+            top:333px!important;
+         }
         select{
             width:100%!important;
             padding:2px 20px!important;
@@ -1534,6 +1628,26 @@ and (max-width : 800px) {
     height: 50px!important;
     padding-top:70px!important;
     }
+
+    .comments{
+
+        img{
+            width:20%!important;
+        }
+    }
+    .respond-right, .respond-left{
+        width:70%!important;
+    }
+
+    .more-arrow{
+        display:none;
+    }
+
+    a.button{
+        padding:10px 15px;
+        font-weight:bold;
+    }
+
 
 }
 

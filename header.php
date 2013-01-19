@@ -4,6 +4,21 @@
     <title>
         <?php wp_title(''); ?> <?php bloginfo('name'); ?>
     </title>
+<!--     googls analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37772917-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+<!-- meta info -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- stylesheets -->
     <link href="<?php bloginfo('template_url'); ?>/stylesheets/royalslider.css" rel="stylesheet">
@@ -25,10 +40,8 @@
 <!-- fancybox -->
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.fancybox.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.fancybox.pack.js"></script>
-<!-- sticky -->
-    <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.stickyscroll.js"></script>
+
 <!-- custom scripts -->
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/scroll.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/scripts.js"></script>
     <?php wp_head(); ?>
 </head>

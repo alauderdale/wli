@@ -44,18 +44,9 @@ Template Name: Services
                         <a class="more-service left" href="#">More...</a>
                         <div class="clearfix"></div>
                         <h3><?php echo get_post_meta($post->ID, 'title_text', true); ?></h3>
-                        <ul>
-                            <?php 
-                                $product_terms = wp_get_object_terms($post->ID, 's_highlight');
-                                if(!empty($product_terms)){
-                                    if(!is_wp_error( $product_terms )){
-                                        foreach($product_terms as $term){
-                                            echo '<li>'.$term->name.'</li>'; 
-                                        }
-                                    }
-                                }
-                            ?>
-                        </ul>
+                        <p>
+                            <?php echo get_post_meta($post->ID, 'bullets', true); ?>
+                        </p>
                     </div>
                 </div>
                 <div class="service-breakdown">

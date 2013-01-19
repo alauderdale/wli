@@ -36,7 +36,7 @@ Template Name: About
             </div>
         </div>
     </div>
-    <a href="index.php?pagename=contact" style="padding-right:28.3%;" class="text-right about-overlay   overlay-link right overlay-link-right">
+    <a href="index.php?pagename=contact" style="padding-right:25.9%;" class="text-right about-overlay   overlay-link right overlay-link-right">
         <span class="arrow-link">We're here to help, drop us a line</span>
     </a>
     <div class="wrapped">

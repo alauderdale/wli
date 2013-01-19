@@ -69,7 +69,21 @@
             'after_widget' => '',
             'before_title' => '',
             'after_title' => '',
-        ) );
+            ) 
+        );
+
+        register_sidebar( array(
+            'name' => 'address',
+            'id' => 'address',
+            'before_widget' => '',
+            'after_widget' => '',
+            'class'         => '',
+            'before_title' => '',
+            'after_title' => '',
+            ) 
+        );
+
+
         
     }
     add_action( 'widgets_init', 'wli_widgets_init' ); 
@@ -156,21 +170,21 @@
 
     ///create portfolio categories
     
-     function my_custom_taxonomies() {
-        register_taxonomy(
-            's_highlight',     // internal name = machine-readable taxonomy name
-            'service',      // object type = post, page, link, or custom post-type
-            array(
-                'hierarchical' => true,
-                'label' => 'Service highlights',    // the human-readable taxonomy name
-                'query_var' => true,    // enable taxonomy-specific querying
-                'rewrite' => array( 'slug' => '?highlight=' ),   // pretty permalinks for your taxonomy?
-            )
-        );
+     // function my_custom_taxonomies() {
+     //    register_taxonomy(
+     //        's_highlight',     // internal name = machine-readable taxonomy name
+     //        'service',      // object type = post, page, link, or custom post-type
+     //        array(
+     //            'hierarchical' => true,
+     //            'label' => 'Service highlights',    // the human-readable taxonomy name
+     //            'query_var' => true,    // enable taxonomy-specific querying
+     //            'rewrite' => array( 'slug' => '?highlight=' ),   // pretty permalinks for your taxonomy?
+     //        )
+     //    );
 
-     }
+     // }
 
-     add_action('init', 'my_custom_taxonomies', 0);
+     // add_action('init', 'my_custom_taxonomies', 0);
 
 
     function my_admin_scripts() {
@@ -301,6 +315,13 @@
                     'desc' => 'enter the title for summary',
                     'id' => 'title_text',
                     'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Bullets',
+                    'desc' => 'enter bullets',
+                    'id' => 'bullets',
+                    'type' => 'textarea',
                     'std' => ''
                 ),
                 array(

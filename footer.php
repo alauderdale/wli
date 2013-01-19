@@ -31,20 +31,17 @@
             <div class="footer-col four-col left">
                 <h1>Get in Touch</h1>
                 <div class="footer-post">
-                        <p>
-                            e. info@wealthlegacyinstitute.com
-                            <br/>
-                            p. 303.753.7578
-                        </p>
+                    <p>
+                        e. info@wealthlegacyinstitute.com
+                        <br/>
+                        p. 303.753.7578
+                    </p>
                 </div>
                 <div class="footer-post">
-                        <p>
-                            950 South Cherry Street #505, 
-                            <br/>
-                            Denver, CO 
-                            <br/>
-                            80246
-                        </p>
+                        <?php 
+                            if ( dynamic_sidebar('address') ) : 
+                        ?>
+                        <?php endif; ?>
                 </div>
                 <div class="footer-post">
                     <a class="left footer-button" href="index.php?pagename=contact">
@@ -70,15 +67,15 @@
                 <div class="right">
                     <ul class="footer-social">
                         <li>
-                            <a href="http://www.linkedin.com/in/kimberlylcurtis" target="_blank" class="ln">
+                            <a href="www.linkedin.com/wealth-legacy-institute-inc-" target="_blank" class="ln">
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.facebook.com/pages/Wealth-Legacy-Institute/110178622336160" target="_blank" class="facebook">
+                            <a href="http://www.facebook.com/WealthLegacyInstitute" target="_blank" class="facebook">
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/WLILegacy/status/277109387552772096" target="_blank" class="twitter">
+                            <a href="www.twitter.com/WLILegacy" target="_blank" class="twitter">
                             </a>
                         </li>
                         <li>

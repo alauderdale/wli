@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image:url(<?php bloginfo('template_url'); ?>/images/blog_bg.png);">
-        <div class="wrapped hero-content blog-hero">
-            <h1>Ideas &amp; Insights</h1>
-        </div><!-- end hero content -->
+    <div class="hero blog-hero" style="background-image:url(<?php bloginfo('template_url'); ?>/images/blog_bg.png);">
+            <div class="wrapped hero-content blog-hero">
+                <h1>Ideas &amp; Insights</h1>
+            </div><!-- end hero content -->
     </div><!-- end hero -->
     <div class="clearfix"></div>
     <div class="wrapped">
@@ -19,7 +19,7 @@
                             </a>
                         </h1>
                         <h3 class="date">
-                            <?php the_date(); ?> 
+                            <?php the_date(); ?>, <a href=" <?php the_permalink(); ?>#comments"><?php comments_number( 'No Comments', '1 Comment' , '% Comments' );?></a>
                         </h3>
                         <div class="featured-img">
                             <?php 
@@ -37,7 +37,7 @@
                         <ul class="post-meta">
                             <li>
                                 <a href="<?php the_permalink(); ?>" class="arrow-link continue-reading">
-                                    Continue Reading
+                                    Full Article
                                 </a>
                             </li>
                             <li>
