@@ -7,7 +7,7 @@ Template Name: Home
 <?php get_header(); ?>
 
 <!--     slider -->
-    <div class="slider ">
+    <div class="slider">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
             <?php
                 $sliderloop = new WP_Query( array( 'post_type' => 'slider_content') );
@@ -38,33 +38,19 @@ Template Name: Home
     <div class="clearfix"></div>
     <div class="wrapped">
         <div class="row border-bottom">
+            <?php
+                $homeserviceloop = new WP_Query( array( 'post_type' => 'home_service') );
+            ?>
+            <?php while ( $homeserviceloop->have_posts() ) : $homeserviceloop->the_post(); ?>
             <div class="four-col left  teaser">
-                <h2>Financial Planning 
-                    &amp; Advice
+                <h2>
+                    <?php the_title(); ?>
                 </h2>
-                <p>
-                    In lacinia elit nec nibh ullamcorper ullamcorper id ut nisi. In imperdiet, augue non consectetur porta
-                </p>
-                <a class="arrow-link" href="#">Learn More</a>   
-            </div>
-            <div class="four-col left teaser">
-                <h2>Financial Planning 
-                    &amp; Advice
-                </h2>
-                <p>
-                    In lacinia elit nec nibh ullamcorper ullamcorper id ut nisi. In imperdiet, augue non consectetur porta
-                </p>   
-                <a class="arrow-link" href="#">Learn More</a>   
-            </div>
-            <div class="four-col left teaser">
-                <h2>Financial Planning 
-                    &amp; Advice
-                </h2>
-                <p>
-                    In lacinia elit nec nibh ullamcorper ullamcorper id ut nisi. In imperdiet, augue non consectetur porta
-                </p>  
-                <a class="arrow-link" href="#">Learn More</a>    
-            </div>
+                <?php the_content(); ?>
+                <a class="arrow-link" href="index.php?pagename=services#<?php echo get_post_meta($post->ID, 'service_slug', true); ?>"><?php echo get_post_meta($post->ID, 'service_call_to_action_text', true); ?></a>   
+            </div>        
+            <!-- end home service loop -->
+            <?php endwhile; ?>
         </div>
         <div class="clearfix"></div>
         <div class="row">
@@ -72,7 +58,7 @@ Template Name: Home
                 Let Us Guide The Way
             </h2>
             <div class="home-descript-copy">
-                <div class="gold large">
+                <div class="gold">
                     <!--start the loop-->
                     <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
@@ -81,10 +67,14 @@ Template Name: Home
                     <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
+            <a class="arrow-link" href="index.php?pagename=about">
+                Learn more about our company
+            </a>  
             </div>
-            <a class="arrow-link" href="#">
-                Let&apos;s find a strategy tailored to your goals
-            </a>   
+            <div class="office-image left">
+                <img src="<?php bloginfo('template_url'); ?>/images/office.png"/>
+            </div>
+            <div class="clearfix"></div> 
         </div>
     </div>
 <?php get_footer(); ?>

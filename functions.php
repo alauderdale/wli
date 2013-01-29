@@ -1,4 +1,14 @@
 <?php
+    
+    //global options
+
+
+
+
+
+
+
+    //thumbnails
 
     if ( function_exists( 'add_theme_support' ) ) {
       add_theme_support( 'post-thumbnails' );
@@ -7,6 +17,8 @@
     //main nav
     
     register_nav_menu( 'main_nav', __( 'Main navigation menu', 'mytheme' ) );
+    register_nav_menu( 'terms', __( 'terms navigation menu in footer', 'mytheme' ) );
+
 
     //    exerpt
 
@@ -16,9 +28,65 @@
     add_filter('excerpt_more', 'new_excerpt_more');
 
     function custom_excerpt_length( $length ) {
-        return 20;
+        return 55;
     }
     add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+    function excerpt($limit) {
+      $excerpt = explode(' ', get_the_excerpt(), $limit);
+      if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+      } else {
+        $excerpt = implode(" ",$excerpt);
+      } 
+      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+      return $excerpt;
+    }
+
+    function content($limit) {
+      $content = explode(' ', get_the_content(), $limit);
+      if (count($content)>=$limit) {
+        array_pop($content);
+        $content = implode(" ",$content).'...';
+      } else {
+        $content = implode(" ",$content);
+      } 
+      $content = preg_replace('/\[.+\]/','', $content);
+      $content = apply_filters('the_content', $content); 
+      $content = str_replace(']]>', ']]&gt;', $content);
+      return $content;
+    }
+
+    /*** Register our sidebars and widgetized areas.**/
+    function wli_widgets_init() {
+
+        register_sidebar( array(
+            'name' => 'twitter',
+            'id' => 'twitter',
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '',
+            'after_title' => '',
+            ) 
+        );
+
+        register_sidebar( array(
+            'name' => 'address',
+            'id' => 'address',
+            'before_widget' => '',
+            'after_widget' => '',
+            'class'         => '',
+            'before_title' => '',
+            'after_title' => '',
+            ) 
+        );
+
+
+        
+    }
+    add_action( 'widgets_init', 'wli_widgets_init' ); 
 
 
     //create post types
@@ -74,25 +142,49 @@
     
             )
         );
+
+        register_post_type( 'home_service',
+            array(
+                'labels' => array(
+                    'name' => __( 'Home Services' ),
+                    'singular_name' => __( 'Homepage Service' )
+                ),
+                'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+                'public' => true,
+    
+            )
+        );
+
+        register_post_type( 'partner',
+            array(
+                'labels' => array(
+                    'name' => __( 'Trusted By' ),
+                    'singular_name' => __( 'partner' )
+                ),
+                'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+                'public' => true,
+    
+            )
+        );
     }
 
     ///create portfolio categories
     
-     function my_custom_taxonomies() {
-        register_taxonomy(
-            's_highlight',     // internal name = machine-readable taxonomy name
-            'service',      // object type = post, page, link, or custom post-type
-            array(
-                'hierarchical' => true,
-                'label' => 'Service highlights',    // the human-readable taxonomy name
-                'query_var' => true,    // enable taxonomy-specific querying
-                'rewrite' => array( 'slug' => '?highlight=' ),   // pretty permalinks for your taxonomy?
-            )
-        );
+     // function my_custom_taxonomies() {
+     //    register_taxonomy(
+     //        's_highlight',     // internal name = machine-readable taxonomy name
+     //        'service',      // object type = post, page, link, or custom post-type
+     //        array(
+     //            'hierarchical' => true,
+     //            'label' => 'Service highlights',    // the human-readable taxonomy name
+     //            'query_var' => true,    // enable taxonomy-specific querying
+     //            'rewrite' => array( 'slug' => '?highlight=' ),   // pretty permalinks for your taxonomy?
+     //        )
+     //    );
 
-     }
+     // }
 
-     add_action('init', 'my_custom_taxonomies', 0);
+     // add_action('init', 'my_custom_taxonomies', 0);
 
 
     function my_admin_scripts() {
@@ -187,6 +279,27 @@
                     'type' => 'text',
                     'std' => ''
                 ),
+                array(
+                    'name' => 'Twitter Url',
+                    'desc' => 'add url for Twitter',
+                    'id' => 'twitter_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Facebook Url',
+                    'desc' => 'add url for Facebook',
+                    'id' => 'facebook_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'LinkedIn Url',
+                    'desc' => 'add url for LinkedIn',
+                    'id' => 'linkedin_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
             )
         ),
         ///services
@@ -197,6 +310,20 @@
             'context' => 'normal',
             'priority' => 'high',
             'fields' => array(
+                array(
+                    'name' => 'Main title',
+                    'desc' => 'enter the title for summary',
+                    'id' => 'title_text',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Bullets',
+                    'desc' => 'enter bullets',
+                    'id' => 'bullets',
+                    'type' => 'textarea',
+                    'std' => ''
+                ),
                 array(
                     'name' => 'Summary title 1',
                     'desc' => 'enter title',
@@ -226,7 +353,7 @@
                     'std' => ''
                 ),
                 array(
-                    'name' => 'Summary 3',
+                    'name' => 'Summary 2',
                     'desc' => 'enter title',
                     'id' => 'sum_2',
                     'type' => 'textarea',
@@ -237,6 +364,62 @@
                     'desc' => 'enter title',
                     'id' => 'sum_3',
                     'type' => 'textarea',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Call to action text',
+                    'desc' => 'enter the text for this services call to action',
+                    'id' => 'cta_text',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+            )
+        ),
+
+        ///home service
+        array(
+            'id' => 'my-meta-box-5',
+            'title' => 'Home Service Options',
+            'pages' => array('home_service'), // multiple post types
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'call to action text',
+                    'desc' => 'add text for the service call to action button',
+                    'id' => 'service_call_to_action_text',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'service slug',
+                    'desc' => 'add slug',
+                    'id' => 'service_slug',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'call to action URL',
+                    'desc' => 'add URL for the service call to action button',
+                    'id' => 'service_call_to_action_url',
+                    'type' => 'text',
+                    'std' => ''
+                )
+            )
+        ),
+        ///partners
+        array(
+            'id' => 'my-meta-box-6',
+            'title' => 'Partner Options',
+            'pages' => array('partner'), // multiple post types
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Partner URL',
+                    'desc' => 'add URL for the partner',
+                    'id' => 'partner_url',
+                    'type' => 'text',
                     'std' => ''
                 ),
             )

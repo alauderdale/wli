@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <div class="hero" style="background-image:url(<?php bloginfo('template_url'); ?>/images/blog_bg.png);">
-        <div class="wrapped hero-content">
-            <h1>Ideas &amp; Insights</h1>
+        <div class="wrapped hero-content blog-hero">
+            <h1>Ideas <span class="blog-and"></span> Insights</h1>
         </div><!-- end hero content -->
     </div><!-- end hero -->
     <div class="clearfix"></div>
     <div class="wrapped">
-        <div class="blog">
+        <div class="blog left">
             <div class="blog-main">
                 <!--start the loop-->
                 <?php if (have_posts()) : ?>
@@ -17,7 +17,7 @@
                                 <?php the_title(); ?> 
                         </h1>
                         <h3 class="date">
-                            <?php the_date(); ?> 
+                            <?php the_date(); ?>, <a href="<?php the_permalink(); ?>#comments"><?php comments_number( 'No Comments', '1 Comment' , '% Comments' );?></a>
                         </h3>
                         <div class="featured-img">
                             <?php 
@@ -29,19 +29,20 @@
                         <div class="content">
                             <?php the_content(); ?> 
                         </div>
+                        <div class="social-share">
+                            <?php if(function_exists('kc_add_social_share')) kc_add_social_share(); ?>
+                        </div>
                         <ul class="post-meta">
                             <li>
-                                <a href="<?php the_permalink(); ?>" class="arrow-link continue-reading">
-                                    Continue Reading
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="share">
+                                <a href="#" onclick="return false"  class="share">
                                     Share
                                 </a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
+                    </div>
+                    <div class="comments post">
+                        <?php comments_template(); ?>
                     </div>
                 <!--end the loop-->
                 <?php endwhile; ?>
